@@ -1,6 +1,8 @@
 <?php
-
+// call the required controllers at the route file
 use Illuminate\Support\Facades\Route;
+use App\Http\controllers\HomeController;
+ use App\Http\controllers\AboutController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -12,18 +14,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route:: get('/',[HomeController::class,'home']);
-Route:: get('/',function(){
 
-    return view('admin.home');
-});
 
-Route:: get('/about',function(){
 
-    return view('about');
-});
-
-Route:: get('/contact',function(){
-
-    return view('contact');
-});
+Route::get("/",[HomeController::class,'home']);
+Route::get("/about",[AboutController::class,'about']);
