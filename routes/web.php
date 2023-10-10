@@ -3,19 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\HomeController;
  use App\Http\controllers\AboutController; 
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+ use App\Http\controllers\MenuController; 
+ use App\Http\controllers\ContactController;
 
 
+
+// create the controllers 
 
 Route::get("/",[HomeController::class,'home']);
 Route::get("/about",[AboutController::class,'about']);
+Route::get("/menu",[MenuController::class,'menu']);
+Route::get("/contact",[ContactController::class,'contact']);
+

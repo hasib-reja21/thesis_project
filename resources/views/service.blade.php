@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>About page configure load</h1>
+    <h1>Service page</h1>
 </body>
 </html>
