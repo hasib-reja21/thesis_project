@@ -11,7 +11,9 @@ use App\Http\controllers\HomeController;
 // create the controllers 
 
 Route::get("/",[HomeController::class,'home']);
-Route::get("/category/list",[CategoryController::class,'list']);
+Route::get("/category/list",[CategoryController::class,'List']);
+Route::get("/category/add-category",[CategoryController::class,'Add']);
+Route::get("/category/view-category",[CategoryController::class,'View']);
 
 
 

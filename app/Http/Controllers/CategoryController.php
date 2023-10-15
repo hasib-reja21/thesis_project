@@ -6,7 +6,14 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function list(){
+    public function List(){
         return view('Admin.Pages.list');
+    }
+    public function Add(){
+        return view('Admin.Pages.add-category');
+    }
+
+    public function View(){
+        return view('Admin.Pages.view-category');
     }
 }
