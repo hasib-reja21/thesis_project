@@ -1,7 +1,10 @@
 @extends('Admin.master')
 @section('content')
 
-<h1>view</h1>
+<h1>view Categories</h1>
+<a href="{{url('/category/form')}}" class= " btn btn-primary" >Add New</a>
+<br><br> 
+<div class="container ">
 <table class="table">
   <thead>
     <tr>
@@ -32,4 +35,7 @@
     </tr>
   </tbody>
 </table>
+
+</div>
+
 @endsection

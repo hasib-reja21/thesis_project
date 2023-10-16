@@ -16,4 +16,7 @@ class CategoryController extends Controller
     public function View(){
         return view('Admin.Pages.view-category');
     }
+    public function createForm(){
+        return view('Admin.Pages.categoryform');
+    }
 }
