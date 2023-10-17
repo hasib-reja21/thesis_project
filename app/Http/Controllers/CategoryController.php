@@ -19,4 +19,8 @@ class CategoryController extends Controller
     public function createForm(){
         return view('Admin.Pages.categoryform');
     }
+    public function store(Request $request){
+        dd($request->All());
+        
+    }
 }

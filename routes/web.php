@@ -15,7 +15,7 @@ Route::get("/category/list",[CategoryController::class,'List']);
 Route::get("/category/add-category",[CategoryController::class,'Add']);
 Route::get("/category/view-category",[CategoryController::class,'View']);
 Route::get("/category/form",[CategoryController::class,'createForm']);
-
+Route::post("/category/store",[CategoryController::class,'store'])->name('category.store');
 
 
 
