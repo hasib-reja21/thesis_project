@@ -114,8 +114,10 @@
             <div class="col-sm-6">
             </div>
           </div>
-
+          
+          <!-- allocate for pages -->
           @yield('content')
+         
 
         </div>
       </div>

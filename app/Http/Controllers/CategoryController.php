@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
+
 
 class CategoryController extends Controller
 {
@@ -14,13 +16,23 @@ class CategoryController extends Controller
     }
 
     public function View(){
-        return view('Admin.Pages.view-category');
+        $categories=Category::all();
+
+        return view('Admin.Pages.view-category',compact('categories'));
     }
     public function createForm(){
         return view('Admin.Pages.categoryform');
     }
     public function store(Request $request){
-        dd($request->All());
+       
+           Category::create([
+
+            'name' =>$request->category_name,
+            'description' =>$request->description_name
+           ]);
+           return redirect()->back()->with('success','Your data has been store Successfully!!');
+                               
+
         
     }
 }

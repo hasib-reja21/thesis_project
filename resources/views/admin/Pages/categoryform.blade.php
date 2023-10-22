@@ -12,6 +12,15 @@
 
 <body>
 
+<div>
+  @if (Session::has('success'))
+  <div class="alert alert-success">
+    {{Session::get('success')}}
+  </div>
+    
+  @endif
+</div>
+
 <section class="intro">
   <div class=" h-100 " >
     <div class="mask d-flex align-items-center h-100 ">
@@ -21,16 +30,15 @@
             <div class="card  " style="border-radius: 1rem; background-color:#C2DEDC;">
               <div class="card-body p-5 shadow-sm rounded">
 
-                <h1 class="mb-5 text-center fw-bold text-uppercase">Category Form</h1>
+                <h1 class="mb-5 text-center fw-bold text-uppercase">Category Entry Form</h1>
                 <hr>
 
                 <form action="{{route('category.store')}}" method="post">
                   @csrf
                   
-
                   <div class="col-12 col-md-6 mb-4">
                     <label class="form-label" for="form6Example3">Categotyy name:</label>
-                    <input type="text" id="form6Example3" class="form-control" name="category_name" placeholder="Enter Category Name..."/>
+                    <input type="text" id="form6Example3" class="form-control" name="category_name" placeholder="Enter Category Name..." required/>
                    
                   </div>
 

@@ -49,15 +49,15 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/category/add-category" class="nav-link">
+                  <a href="/category/view-category" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Add Categories</p>
+                    <p>View Categories</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/category/view-category" class="nav-link">
+                  <a href="/category/add-category" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>View categories</p>
+                    <p>Add categories</p>
                   </a>
                 </li>
               </ul>
@@ -143,14 +143,22 @@
                     <p>Compose</p>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="pages/mailbox/read-mail.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
+                <li class="nav-item">ail.html" class="nav-link">
+                    <i class="far fa
+                  <a href="pages/mailbox/read-m-circle nav-icon"></i>
                     <p>Read</p>
                   </a>
               </ul>
             </li>
-
+            <li class="nav-item">
+              <a href="{{url('/communication/form')}}" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Contact
+                  <span class="badge badge-info right"></span>
+                </p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>

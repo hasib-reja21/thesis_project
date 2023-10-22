@@ -2,9 +2,8 @@
 // call the required controllers at the route file
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\HomeController;
- use App\Http\controllers\AboutController; 
- use App\Http\controllers\MenuController; 
  use App\Http\controllers\CategoryController;
+ use App\Http\controllers\ContactController;
 
 
 
@@ -17,5 +16,5 @@ Route::get("/category/view-category",[CategoryController::class,'View']);
 Route::get("/category/form",[CategoryController::class,'createForm']);
 Route::post("/category/store",[CategoryController::class,'store'])->name('category.store');
 
-
-
+Route::get("/communication/form",[ContactController::class,'Form'])->name('contact.form');
+Route::post("/communication/store",[ContactController::class,'Store'])->name('communication.store');
