@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Auction</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
   <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/fontawesome-free/css/all.min.css">
@@ -92,18 +92,17 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
-
     <div class="preloader flex-column justify-content-center align-items-center">
 
     </div>
 
-    
-  <!-- for navheader -->
+
+    <!-- for navheader -->
     @include('admin.partial.navheader')
 
 
-    
-  <!-- for side nav -->
+
+    <!-- for side nav -->
     @include('admin.partial.sidenav')
 
     <div class="content-wrapper">
@@ -114,17 +113,39 @@
             <div class="col-sm-6">
             </div>
           </div>
-          
+
+
           <!-- allocate for pages -->
-          @yield('content')
-         
+         @yield('content')
+
+
+          <div class="card-body pt-0">
+
+            <div id="calendar" style="width: 100%"></div>
+          </div>
 
         </div>
-      </div>
-    </div>
-    <aside class="control-sidebar control-sidebar-dark">
 
-    </aside>
+        </section>
+
+      </div>
+
+    </div>
+    </section>
+
+  </div>
+
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="{{url('/')}}">AuctionBiddingSystem</a>.</strong>
+    All rights reserved.
+    <!-- <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
+    </div> -->
+  </footer>
+
+  <aside class="control-sidebar control-sidebar-dark">
+
+  </aside>
 
   </div>
 
@@ -162,6 +183,9 @@
   <script src="https://adminlte.io/themes/v3/dist/js/demo.js"></script>
 
   <script src="https://adminlte.io/themes/v3/dist/js/pages/dashboard.js"></script>
+
+
+
 </body>
 
 </html>

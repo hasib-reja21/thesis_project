@@ -9,30 +9,27 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
     public function List(){
-        return view('Admin.Pages.list');
+        return view('Admin.Pages.Category.list');
     }
-    public function Add(){
-        return view('Admin.Pages.add-category');
-    }
-
+   
     public function View(){
-        $categories=Category::all();
+        //view data at the view page through model
+        $categories=Category::paginate(5);
 
-        return view('Admin.Pages.view-category',compact('categories'));
-    }
+        return view('Admin.Pages.Category.view-category',compact('categories'));
+    } 
+    //return the category form at view page
     public function createForm(){
-        return view('Admin.Pages.categoryform');
+        return view('Admin.Pages.Category.categoryform');
     }
+    //query for store the data at the database
     public function store(Request $request){
-       
            Category::create([
-
             'name' =>$request->category_name,
             'description' =>$request->description_name
            ]);
            return redirect()->back()->with('success','Your data has been store Successfully!!');
-                               
-
-        
+                             
     }
+   
 }

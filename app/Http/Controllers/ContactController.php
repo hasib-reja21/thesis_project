@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    public function Form(){
-        return view(('admin.pages.contact'));
+    public function createForm(){
+        return view(('admin.pages.Contact.contact'));
     }
     public function Store(Request $request){
 
@@ -21,7 +21,7 @@ class ContactController extends Controller
             'message' =>$request->message
            ]);
            return redirect()->back()
-                               ->with('success','Category Created Successfully!!');
+                               ->with('success','Your data has been submitted Successfully!!');
 
         
     }

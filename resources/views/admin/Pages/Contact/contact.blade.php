@@ -1,4 +1,5 @@
-
+@extends('admin.master')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,11 +20,12 @@
         @endif
     </div>
     <!-- Contact 1 - Bootstrap Brain Component -->
-    <section class="bg-light py-3 py-md-5">
+    <h4 class="shadow p-2 text-uppercase col-12 text-center p-3">add contact info</h4>
+    <section class="bg-light py-2 py-md-3">
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                    <h2 class="mb-4 display-5 text-center">Contact</h2>
+                
 
                 </div>
             </div>
@@ -36,7 +38,7 @@
 
                         <form action="{{route('communication.store')}}" method="post">
                             @csrf
-                            <div class="row gy-4 gy-xl-5 p-4 p-xl-5" style="background-color:#C2DEDC;">
+                            <div class="row gy-3 p-4 p-xl-5" >
                                 <div class="col-12">
                                     <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
@@ -83,3 +85,4 @@
 </body>
 
 </html>
+@endsection
