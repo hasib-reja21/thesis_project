@@ -87,15 +87,7 @@
         <i class="far fa-bell"></i>
         <span class="badge badge-warning navbar-badge">15</span>
       </a>
-    </li>
-    <li class="nav-item dropdown ms-auto"><a class="nav-link pe-0" id="userInfo" href="#"  ><img class="img-size-50 img-circle mr-3" style="width: 30px; height:30px" src=" https://i.ibb.co/wYLjFNk/Hasib.jpg" alt=""></a>
-            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated" aria-labelledby="userInfo">
-              <div class="dropdown-header text-gray-700">
-                <h6 class="text-uppercase font-weight-bold">Mark Stephen</h6><small>Web Developer</small>
-              </div>
-              <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity log</a>
-              <div class="dropdown-divider"></div><a class="dropdown-item" href="login.html">Logout</a>
-            </div>
-          </li>
+    </li>    
   </ul>
+  <div class=" btn dropdown-divider"></div><a class="btn text-white" href="{{route('admin.logout')}}">Logout</a>
 </nav>

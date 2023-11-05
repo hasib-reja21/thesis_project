@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Models\Product;
+
 use App\Models\Category;
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Validator as FacadesValidator;
 
 class ProductController extends Controller
 {
@@ -18,6 +21,17 @@ class ProductController extends Controller
     return view('admin.Pages.Products.product-list',compact('products'));
   }
   public function store(Request $request){
+    //form validation
+  $validate=validator::make($request->all(),[
+    'product_Name'=>'required',
+    'category_Name'=>'required',
+    'product_Image'=>'required',
+    'product_Price'=>'required'
+  ]);
+  if($validate->fails()){
+    return redirect()->back()->withErrors($validate);
+  }
+
     Product::create([
         'Product_Name' =>$request->product_Name,
         'brand_id' =>$request->brand_Name,

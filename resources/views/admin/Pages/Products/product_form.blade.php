@@ -29,18 +29,21 @@
                 <div class="form-group">
                     <label for="productName">Product Name</label>
                     <input type="text" class="form-control   " id="productName" name="product_Name" placeholder="Enter product Name" required>
+                    @error('product_Name')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label for="productName">Select Brand</label>
-                    <select  class="form-control  name="brand_Name" id="">
+                    <select class="form-control  name=" brand_Name" id="">
                         <option value="">Hello</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="productName">Select Category</label>
-                    <select  class="form-control  name="category_Name" id="">
+                    <select class="form-control  name=" category_Name" id="" required>
 
-                    //for dropdown oprion
+                        //for dropdown oprion
                         @foreach ($categories as $category )
                         <option value="">{{$category->name}}</option>
                         @endforeach
