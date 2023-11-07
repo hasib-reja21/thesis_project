@@ -94,6 +94,7 @@
         </ul>
       <li class="nav-item">
         <a href="#" class="nav-link">
+        <i class="fa-regular fa-user"></i>
           <p>
             Manage User
             <i class="fas fa-angle-left right"></i>

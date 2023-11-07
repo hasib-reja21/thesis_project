@@ -89,5 +89,5 @@
       </a>
     </li>    
   </ul>
-  <div class=" btn dropdown-divider"></div><a class="btn text-white" href="{{route('admin.logout')}}">Logout</a>
+  <div class=" btn "></div><a class="btn text-white " href="{{route('admin.logout')}}">Logout</a>
 </nav>

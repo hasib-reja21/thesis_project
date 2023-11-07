@@ -14,9 +14,6 @@ use App\Http\Controllers\UserController;
 Route::get('/admin/login',[UserController::class,'loginForm'])->name('admin.login');
 Route::post('/login-form-post',[UserController::class,'loginPost'])->name('admin.login.post');
 
-
-
-
 Route::group(['middleware'=>'auth'],function(){
 Route::get('/admin/logout',[UserController::class, 'logout'])->name('admin.logout');
 Route::get("/",[DashboardController::class,'dashboard'])->name('dashboard');
