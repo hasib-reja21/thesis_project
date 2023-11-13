@@ -25,19 +25,26 @@ class ProductController extends Controller
   $validate=validator::make($request->all(),[
     'product_Name'=>'required',
     'category_Name'=>'required',
-    'product_Image'=>'required',
+    'Product_Image'=>'required',
     'product_Price'=>'required'
   ]);
   if($validate->fails()){
     return redirect()->back()->withErrors($validate);
   }
+  //for file handling
+  $fileName=null;
+  if($request->hasFile('Product_Image')){
 
+    $file=$request->file('Product_Image');
+    $fileName=date('Ymdhis').'.'.$file->getClientOriginalExtension();
+    $file->storeAs('/uploads',$fileName);
+  }
     Product::create([
         'Product_Name' =>$request->product_Name,
         'brand_id' =>$request->brand_Name,
         'category_id' =>$request->category_Name,
         'Product_Price' =>$request->product_Price,
-        'Product_Image' =>$request->product_Image
+        'Product_Image' =>$fileName
        ]);
        return redirect()->back()
                            ->with('success','product created Successfully!!');

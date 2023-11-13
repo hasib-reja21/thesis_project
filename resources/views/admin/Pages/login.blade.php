@@ -59,11 +59,7 @@
                                     </div>
                                     <button class="btn btn-primary btn-md btn-block" type="submit">Login</button>
                                 </form>
-                                <!-- Checkbox -->
-                                <!-- <div class="form-check d-flex justify-content-start mb-4">
-                                <input class="form-check-input border " type="checkbox" value="" id="form1Example3" />
-                                <label class="form-check-label" for="form1Example3"> Remember password </label>
-                            </div> -->
+                              
 
                             </div>
                         </div>

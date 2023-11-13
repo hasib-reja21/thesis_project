@@ -33,7 +33,9 @@
         <tr class="text-center"class="border">
           <th scope="row">{{$key+1}}</th>
           <td>{{$product->Product_Name}}</td>
-          <td>{{$product->Product_Image}}</td>
+          <td>
+            <img src="{{url('/uploads//'.$product->product_Image)}}" alt="">
+          </td>
           <td>{{$product->status}}</td>
           <td>
              <a href="" class="btn btn-dark mr-3 btn-sm">View</a>

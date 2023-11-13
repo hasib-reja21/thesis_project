@@ -23,7 +23,7 @@
     <div class="container ">
         <h4 class="shadow p-2 text-uppercase col-12 text-center py-3 mb-3">add product</h4>
         <div class="   d-flex justify-content-center border py-2 ">
-            <form action="{{route('product.store')}}" method="POST" class="w-100 mr-3 ml-3 mt-3 mb-3 col-9">
+            <form action="{{route('product.store')}}" method="POST" class="w-100 mr-3 ml-3 mt-3 mb-3 col-9" enctype="multipart/form-data">
                 @csrf
 
                 <div class="form-group">
@@ -52,7 +52,7 @@
 
                 <div class="form-group">
                     <label for="productImage">Upload Image</label>
-                    <input type="file" class="form-control" id="productImage" name="product_Image" required>
+                    <input type="file" class="form-control" id="productImage" name="Product_Image" required>
                 </div>
                 <div class="form-group">
                     <label for="productPrice">Product Price</label>

@@ -9,7 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 
 // create the controllers 
-// Route::get("/",[HomeController::class,'home']);
+Route::get("/frontend",[HomeController::class,'home']);
 
 Route::get('/admin/login',[UserController::class,'loginForm'])->name('admin.login');
 Route::post('/login-form-post',[UserController::class,'loginPost'])->name('admin.login.post');

@@ -50,6 +50,17 @@
         </a>
 
       </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+        <i class="fa-regular fa-user"></i>
+          <p>
+             Sales
+            <i class="fas fa-angle-left right"></i>
+            <span class="badge badge-info right"></span>
+          </p>
+        </a>
+        </li>
       <li class="nav-item">
         <a href="" class="nav-link">
           
@@ -67,6 +78,17 @@
             </a>
           </li>
         </ul>
+
+        <li class="nav-item">
+        <a href="#" class="nav-link">
+        <i class="fa-regular fa-user"></i>
+          <p>
+             Customers
+            <i class="fas fa-angle-left right"></i>
+            <span class="badge badge-info right"></span>
+          </p>
+        </a>
+        </li>
       <li class="nav-item">
         <a href="#" class="nav-link">
         
@@ -96,12 +118,12 @@
         <a href="#" class="nav-link">
         <i class="fa-regular fa-user"></i>
           <p>
-            Manage User
+             User
             <i class="fas fa-angle-left right"></i>
             <span class="badge badge-info right"></span>
           </p>
         </a>
-        <ul class="nav nav-treeview">
+        <!-- <ul class="nav nav-treeview">
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="far fa-circle nav-icon ml-3"></i>
@@ -114,7 +136,7 @@
               <p class="text-sm ml-3">Delete User</p>
             </a>
           </li>
-        </ul>
+        </ul> -->
       <li class="nav-item">
         <a href="#" class="nav-link">
           
@@ -152,6 +174,27 @@
                 </a>
             </ul>
           </li> -->
+
+          <li class="nav-item">
+        <a href="#" class="nav-link">
+        <i class="fa-regular fa-user"></i>
+          <p>
+             Sms
+            <i class="fas fa-angle-left right"></i>
+            <span class="badge badge-info right"></span>
+          </p>
+        </a>
+        </li>
+        <li class="nav-item">
+        <a href="#" class="nav-link">
+        <i class="fa-regular fa-user"></i>
+          <p>
+             Settings
+            <i class="fas fa-angle-left right"></i>
+            <span class="badge badge-info right"></span>
+          </p>
+        </a>
+        </li>
       <li class="nav-item">
         <a href="" class="nav-link">
           
