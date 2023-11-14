@@ -10,7 +10,15 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
+   <style>
+    img{
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+     
+      border: 2px solid orange;
+    }
+   </style>
 <body>
 <h4 class="shadow p-2 text-uppercase col-12 text-center py-3 f-w-300 " style="background-color:rgba(255, 255, 255,1.0)">view product list</h4>
   <div class="container">
@@ -34,7 +42,7 @@
           <th scope="row">{{$key+1}}</th>
           <td>{{$product->Product_Name}}</td>
           <td>
-            <img src="{{url('/uploads//'.$product->product_Image)}}" alt="">
+            <img  src="{{url('/uploads//'.$product->Product_Image)}}" alt="">
           </td>
           <td>{{$product->status}}</td>
           <td>

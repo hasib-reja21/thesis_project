@@ -53,7 +53,7 @@
 
       <li class="nav-item">
         <a href="#" class="nav-link">
-        <i class="fa-regular fa-user"></i>
+        <!-- <i class="fa-regular fa-user"></i> -->
           <p>
              Sales
             <i class="fas fa-angle-left right"></i>
@@ -81,7 +81,7 @@
 
         <li class="nav-item">
         <a href="#" class="nav-link">
-        <i class="fa-regular fa-user"></i>
+        <!-- <i class="fa-regular fa-user"></i> -->
           <p>
              Customers
             <i class="fas fa-angle-left right"></i>
@@ -177,7 +177,7 @@
 
           <li class="nav-item">
         <a href="#" class="nav-link">
-        <i class="fa-regular fa-user"></i>
+        <!-- <i class="fa-regular fa-user"></i> -->
           <p>
              Sms
             <i class="fas fa-angle-left right"></i>
@@ -187,7 +187,7 @@
         </li>
         <li class="nav-item">
         <a href="#" class="nav-link">
-        <i class="fa-regular fa-user"></i>
+        <!-- <i class="fa-regular fa-user"></i> -->
           <p>
              Settings
             <i class="fas fa-angle-left right"></i>

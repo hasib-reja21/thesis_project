@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('category_id')->nullable();
             $table->double('Product_Price');
             $table->text('Product_Description')->nullable();
-            $table->text('Product_Image')->nullable();
+            $table->string('Product_Image')->nullable();
             $table->string('status')->default('active');
             $table->timestamps();
         });

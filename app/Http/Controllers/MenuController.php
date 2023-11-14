@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    function menu(){
-        return view('menu');
+    function registration(){
+        return view('admin.Frontend.Pages.registration');
+    }
+
+    public function login(){
+        return view('admin.Frontend.Pages.login');
     }
 }
