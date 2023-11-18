@@ -26,24 +26,46 @@
                 <h6 class="text--base">Welcome Back!</h6>
                 <h2 class="title text-white">Sign In to your account</h2>
                 <p class="mt-3">Don't have an account with us? Then you can create a account and get access to all of our premium features.
-                    <br> <a href="" class="text--base">Register Now!</a>
+                    <br> <a href="{{route('customer.registration')}}" class="text--base">Register Now!</a>
                 </p>
                 <h4 class="text-white mt-5 mb-3">We are involved with</h4>
                 
+                
             </div>
         </div>
-
+        
         <div class="right">
+        
             <div class="el"><img src="" alt="image"></div>
             <div class="top w-100 text-center">
-                <a href="https://thesoftking.com"><img src="" alt=""></a>
+                <a href=""><img src="" alt=""></a>
             </div>
             <div class="middle w-100">
+
+             <div>
+                    @if (Session::has('success'))
+                    <div class="alert alert-success">
+                        {{Session::get('success')}}
+                    </div>
+
+                    @endif
+                </div>
+            <!-- <div>
+                    @if (Session::has('error'))
+                    <div class="alert alert-danger">
+                        {{Session::get('error')}}
+                    </div>
+
+                    @endif
+                </div>  -->
+                <!-- @include('notify::components.notify') -->
                 <form class="account-form" action="" method="post">
-                    <input type="hidden" name="_token" value="RtCs5iuAcknsGLLWe01aXjZwsusYjLC4wzJSqlOJ">
+
+                    @csrf
                     <div class="form-group">
-                        <label>Username / Email</label>
-                        <input type="text" name="username" autocomplete="off" class="form--control" placeholder="Username or Email" required>
+                    
+                        <label> Email</label>
+                        <input type="email"  name="email"  class="form--control" placeholder="Username or Email" required>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
@@ -69,7 +91,7 @@
 
 
 
-    <script src="https://thesoftking.com/assets/js/lib/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://thesoftking.com/assets/js/lib/jquery-3.6.0.min.js"></script>
     <script src="https://thesoftking.com/assets/js/lib/bootstrap.bundle.min.js"></script>
     <script src="https://thesoftking.com/assets/js/lib/slick.min.js"></script>
     <script src="https://thesoftking.com/assets/js/lib/wow.min.js"></script>
@@ -77,7 +99,7 @@
     <script src="https://thesoftking.com/assets/js/app.js"></script>
 
     <link rel="stylesheet" href="https://thesoftking.com/assets/admin/css/iziToast.min.css">
-    <script src="https://thesoftking.com/assets/admin/js/iziToast.min.js"></script>
+    <script src="https://thesoftking.com/assets/admin/js/iziToast.min.js"></script> -->
 
 </body>
 

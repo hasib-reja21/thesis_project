@@ -12,8 +12,8 @@
 </head>
    <style>
     img{
-      height: 70px;
-      width: 70px;
+      height: 80px;
+      width: 80px;
       border-radius: 50%;
      
       border: 2px solid orange;
@@ -29,7 +29,9 @@
         <tr class="text-center">
           <th scope="col"class="border">ID</th>
           <th scope="col"class="border">Product Name</th>
+          
           <th scope="col"class="border">Image</th>
+          <th scope="col"class="border">Price</th>
           <th scope="col-"class="border">Status</th>
           
           <th scope="col">Action</th>
@@ -41,9 +43,12 @@
         <tr class="text-center"class="border">
           <th scope="row">{{$key+1}}</th>
           <td>{{$product->Product_Name}}</td>
+          
           <td>
             <img  src="{{url('/uploads//'.$product->Product_Image)}}" alt="">
           </td>
+          <td>{{$product->Product_Price}}</td>
+
           <td>{{$product->status}}</td>
           <td>
              <a href="" class="btn btn-dark mr-3 btn-sm">View</a>

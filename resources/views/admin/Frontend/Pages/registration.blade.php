@@ -2,18 +2,10 @@
 <html lang="en">
 
 <head>
-   
+
     <meta name="twitter:creator" content="@thesoftking">
 
-    <link rel="canonical" href="https://thesoftking.com/register" />
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "WebSite",
-            "name": "THESOFTKING",
-            "url": "https://thesoftking.com"
-        }
-    </script>
+
 
     <link rel="shortcut icon" href="https://thesoftking.com/assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://thesoftking.com/assets/css/lib/bootstrap.min.css">
@@ -26,13 +18,13 @@
 </head>
 
 <body>
-    
+
     <section class="account-section style--two">
         <div class="left bg_img" style="background-image: url('https://i.ibb.co/SRTLdcY/bid.jpg');">
             <div class="left-inner text-center">
                 <h6 class="text--base">Welcome</h6>
                 <h2 class="title text-white">Create an Account</h2>
-                <p class="mt-3">Already have an account with us? Then just login with your existing username and password and get access to all of our premium features. <br> <a href="https://thesoftking.com/login" class="text--base">Login Now!</a></p>
+                <p class="mt-3">Already have an account with us? Then just login with your existing username and password and get access to all of our premium features. <br> <a href="{{route('customer.login')}}" class="text--base">Login Now!</a></p>
                 <h4 class="text-white mt-5 mb-3">We are involved with</h4>
             </div>
         </div>
@@ -40,28 +32,35 @@
         <div class="right">
             <div class="middle w-100">
 
-                <form class="account-form" action="" method="post">
-                    <input type="hidden" name="_token" value="RtCs5iuAcknsGLLWe01aXjZwsusYjLC4wzJSqlOJ">
+                <div>
+                    @if (Session::has('success'))
+                    <div class="alert alert-success">
+                        {{Session::get('success')}}
+                    </div>
+
+                    @endif
+                </div>
+                
+                <!-- @include('notify::components.notify') -->
+                <form class="account-form" action="{{route('customer.store')}}" method="post">
+                    @csrf
+
                     <div class="row">
 
-                        <div class="form-group col-sm-6">
-                            <label>First Name</label>
-                            <input type="text" name="first_name" value="" autocomplete="off" class="form--control" placeholder="First Name...">
+                        <div class="form-group col-sm-12">
+                            <label>Name</label>
+                            <input required type="text" name="name" value="" autocomplete="off" class="form--control" placeholder="Enter your Name...">
                         </div>
 
-                        <div class="form-group col-sm-6">
-                            <label>Last Name</label>
-                            <input type="text" name="last_name" value="" autocomplete="off" class="form--control" placeholder="Last Name...">
-                        </div>
 
                         <div class="form-group col-sm-6">
                             <label>Username</label>
-                            <input type="text" name="username" value="" autocomplete="off" class="form--control" placeholder="Username..." minlength="6">
+                            <input required type="text" name="username" class="form--control" placeholder="Username..." minlength="6">
                         </div>
 
                         <div class="form-group col-sm-6">
                             <label>Email</label>
-                            <input type="email" name="email" value="" autocomplete="off" class="form--control" placeholder="Email Address...">
+                            <input required type="email" name="email" autocomplete="on" class="form--control" placeholder="Email Address...">
                         </div>
 
                         <div class="form-group col-sm-6">

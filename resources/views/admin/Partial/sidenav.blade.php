@@ -50,10 +50,20 @@
         </a>
 
       </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+        <i class="fa-solid fa-user-plus"></i>
+          <p>
+              User
+            <i class="fas fa-angle-left right"></i>
+            <span class="badge badge-info right"></span>
+          </p>
+        </a>
+      </li>
 
       <li class="nav-item">
         <a href="#" class="nav-link">
-        <!-- <i class="fa-regular fa-user"></i> -->
+        <i class="fa-solid fa-cart-shopping"></i>
           <p>
              Sales
             <i class="fas fa-angle-left right"></i>
@@ -63,7 +73,7 @@
         </li>
       <li class="nav-item">
         <a href="" class="nav-link">
-          
+        <i class="fa-solid fa-tag"></i>
           <p>
             Categories
             <i class="fas fa-angle-left right"></i>
@@ -81,7 +91,7 @@
 
         <li class="nav-item">
         <a href="#" class="nav-link">
-        <!-- <i class="fa-regular fa-user"></i> -->
+        <i class="fa-solid fa-user-check"></i>
           <p>
              Customers
             <i class="fas fa-angle-left right"></i>
@@ -91,7 +101,7 @@
         </li>
       <li class="nav-item">
         <a href="#" class="nav-link">
-        
+        <i class="fa-solid fa-bag-shopping"></i>
           <p>
             Manage product
             <i class="fas fa-angle-left right ml-3"></i>
@@ -114,32 +124,10 @@
       </li>
           
         </ul>
+      
       <li class="nav-item">
         <a href="#" class="nav-link">
-        <i class="fa-regular fa-user"></i>
-          <p>
-             User
-            <i class="fas fa-angle-left right"></i>
-            <span class="badge badge-info right"></span>
-          </p>
-        </a>
-        <!-- <ul class="nav nav-treeview">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="far fa-circle nav-icon ml-3"></i>
-              <p class="text-sm ml-3">Access User Data</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="far fa-circle nav-icon ml-3"></i>
-              <p class="text-sm ml-3">Delete User</p>
-            </a>
-          </li>
-        </ul> -->
-      <li class="nav-item">
-        <a href="#" class="nav-link">
-          
+        <i class="fa-solid fa-users"></i>
           <p>
             Manage Bidder
             <span class="badge badge-info right"></span>
@@ -177,9 +165,9 @@
 
           <li class="nav-item">
         <a href="#" class="nav-link">
-        <!-- <i class="fa-regular fa-user"></i> -->
+        <i class="fa-solid fa-message"></i>
           <p>
-             Sms
+             Message
             <i class="fas fa-angle-left right"></i>
             <span class="badge badge-info right"></span>
           </p>
@@ -187,7 +175,7 @@
         </li>
         <li class="nav-item">
         <a href="#" class="nav-link">
-        <!-- <i class="fa-regular fa-user"></i> -->
+        <i class="fa-solid fa-gear"></i>
           <p>
              Settings
             <i class="fas fa-angle-left right"></i>
@@ -197,9 +185,19 @@
         </li>
       <li class="nav-item">
         <a href="" class="nav-link">
-          
+        <i class="fa-solid fa-chart-simple"></i>
           <p>
             Create Report
+            <span class="badge badge-info right"></span>
+          </p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="{{route('frontend.home')}}" class="nav-link">
+        <i class="fa-solid fa-globe"></i>
+          <p>
+            Website
             <span class="badge badge-info right"></span>
           </p>
         </a>

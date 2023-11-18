@@ -14,7 +14,7 @@ class CategoryController extends Controller
    
     public function View(){
         //view data at the view page through model
-        $categories=Category::paginate(5);
+        $categories=Category::paginate(8);
 
         return view('Admin.Pages.Category.view-category',compact('categories'));
     } 
