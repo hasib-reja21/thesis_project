@@ -23,9 +23,9 @@
     <div class="container ">
         <h4 class="shadow p-2 text-uppercase col-12 text-center py-3 mb-3">Update product</h4>
         <div class="d-flex justify-content-center border py-1 ">
-            <form action="{{route('product.store')}}" method="POST" class="w-100 mr-3 ml-3 mt-3 mb-3 col-9" enctype="multipart/form-data">
+            <form action="{{route('product.update',$product->id)}}" method="POST" class="w-100 mr-3 ml-3 mt-3 mb-3 col-9" enctype="multipart/form-data">
                 @csrf
-
+                @method('put')
                 <div class="form-group">
                     <label for="productName">Product Name</label>
                     <input value="{{$product->Product_Name}}" type="text" class="form-control   " id="productName" name="product_Name" placeholder="Enter product Name" required>
@@ -43,16 +43,17 @@
                     <label for="productName">Select Category</label>
                     <select class="form-control   name="category_Name" required>
 
-                        //for dropdown oprion
+                        <!-- category dropdown -->
                         @foreach ($categories as $category )
-                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        <option  value="{{$category-id }}">{{$category->name}}</option>
+                        <!-- @if($product->category_id==$category->id) selected @endif -->
                         @endforeach
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="productImage">Upload Image</label>
-                    <input type="file" class="form-control" id="productImage" name="Product_Image" required>
+                    <input type="file" class="form-control" id="productImage" name="Product_Image" >
                 </div>
                 <div class="form-group">
                     <label for="productPrice">Product Price</label>

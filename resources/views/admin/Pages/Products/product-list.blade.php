@@ -12,11 +12,11 @@
 </head>
    <style>
     img{
-      height: 80px;
-      width: 80px;
+      height: 70px;
+      width: 70px;
       border-radius: 50%;
-     
-      border: 2px solid orange;
+      border: 1px solid black;
+      
     }
    </style>
 <body>
@@ -61,6 +61,7 @@
         
       </tbody>
     </table>
+    <!-- for pagination links -->
     {{ $products->links() }}
   </div>
 </body>

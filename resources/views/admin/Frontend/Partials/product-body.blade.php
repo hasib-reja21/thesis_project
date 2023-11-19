@@ -57,7 +57,7 @@
                             <span class="total-bids"><span style="color: orange;">|</span> 30 Bids</span>
                         </div>
                         <div class="text-center" style="text-align: right !important;">
-                            <button class="btn btn-warning text-white mt-5 "><a href="">Submit a Bid</a></button>
+                            <button class="btn btn-success text-white mt-5 "><a href="">Bid Now</a></button>
                         </div>
                     </div>
                 </div>
