@@ -1,6 +1,6 @@
 <section class=" pb-100 sections-bg">
     <div class="bg-section">
-        <img src="assets/images/service/bg2.png" alt="">
+        <img src="#" alt="">
     </div>
     <div class="container">
         <div class="row justify-content-center">
@@ -20,8 +20,8 @@
                 <div class="service_item style_1 shadow" style="text-align: left">
                     <div class="auction-thumb">
                         <a href=""><img style="width: 100%;" src="{{url('/uploads//'.$product->Product_Image)}}" alt="product_image"></a>
-                        <!-- <a href="#0" class="rating"><i class="fa-regular fa-star" style="color:yellow;"></i></a> -->
-                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
+                        <a href="#0" class="rating"><i class="fa-regular fa-star" style="color:yellow;"></i></a> 
+                       
                     </div>
                     <div>
                         <h5 class="title mt-2 text-left">

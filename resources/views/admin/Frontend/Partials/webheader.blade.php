@@ -20,8 +20,8 @@
                             @guest
                                 
                            
-                            <li ><a  href="{{route('customer.login')}}"><i class="fa fa-sign-out text-white aria-hidden="true"></i>Login </a></li>
-                            <li><a href="{{route('customer.registration')}}"><i class="fa-solid fa-user text-white "></i>Register</a></li>
+                            <li ><a  href="{{route('customer.login')}}"><i class="fa fa-sign-out text-white  aria-hidden="true"></i>Login </a></li>
+                            <li><a href="{{route('customer.registration')}}"><i class="fa-solid fa-user text-white  "></i>Register</a></li>
                             @endguest
 
                             @auth
@@ -47,7 +47,7 @@
                         <button type="button" class="menu-sidebar-close"><i class="las la-times"></i></button>
                         <ul class="navbar-nav main-menu m-auto">
                             <li><a href="#">Home</a></li>
-                            <li class="menu_has_children">
+                            <li class="">
                                 <a href="#0">About</a>
                                 <ul class="sub-menu">
                                     <li><a href="#">Company Intro</a></li>
@@ -56,8 +56,15 @@
                                     <li><a href="#">Articles</a></li>
                                 </ul>
                             </li>
-
-                            <li class="menu_has_children has-mega-menu">
+                            <li class="">
+                                <a href="#0">Manage products</a>
+                                <ul class="sub-menu">
+                                    <li><a href="{{route('product.create')}}">Add product</a></li>
+                                    <li><a href="{{route('product.list')}}">View product</a></li>
+                                </ul>
+                            </li>
+    
+                            <li class="has-mega-menu">
                                 <a href="#0">Products</a>
                                
                                 <div class="mega-menu">

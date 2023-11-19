@@ -3,7 +3,7 @@
 
 <head>
 
-    <!-- <link rel="canonical" href="https://thesoftking.com" /> -->
+    <link rel="canonical" href="https://thesoftking.com" /> 
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",

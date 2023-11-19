@@ -18,6 +18,24 @@ class ProductController extends Controller
     $products=Product::paginate(5);
     return view('admin.Pages.Products.product-list',compact('products'));
   }
+
+
+    public function delete($id){
+    $product=Product::find($id);
+  if($product){
+    $product->delete();
+  }
+  return redirect()->back();
+
+    }
+
+
+    public function edit($id){
+      $product=Product::find($id);
+      $categories=Category::all();
+      return view('admin.Pages.Products.edit',compact('product','categories'));
+
+    }
   public function store(Request $request){
     //form validation
     //  dd($request->all());

@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('content')
 
-
+<h4 class="shadow p-2  col-12 ml-2 mb-2  py-3 f-w-300 " style="background-color:rgba(255, 255, 255,1.0)">Dashboard</h4>
     <section class="content">
         <div class="container-fluid">
 

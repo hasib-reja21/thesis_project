@@ -86,11 +86,11 @@
                                         </div>
                                     </div>
                                     <ul class="rating_star unordered_list">
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
                                     </ul>
                                 </div>
                                 <p class="testimonial_des">“I just want to thank the support staff because they have been wonderful! I have never been left alone and despite my repeated requests, they have assured.Thank you”</p>
@@ -115,11 +115,11 @@
                                         </div>
                                     </div>
                                     <ul class="rating_star unordered_list">
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
                                     </ul>
                                 </div>
                                 <p class="testimonial_des">“Good template to start with. I had one minor issue with implementation but was resolved with fast reply from Thesoftking. Will use Thesoftking for some aditional costumisation in the future - since it will be done the fastest with their help.”</p>
@@ -144,11 +144,11 @@
                                         </div>
                                     </div>
                                     <ul class="rating_star unordered_list">
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
                                     </ul>
                                 </div>
                                 <p class="testimonial_des">“It's a good script. Installation easy in two minutes. It's very easy to configure. The support is perfect, the support help you in the installation or any questions you have very fast and correct. It's 100% recommended.”</p>
@@ -172,11 +172,11 @@
                                         </div>
                                     </div>
                                     <ul class="rating_star unordered_list">
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
                                     </ul>
                                 </div>
                                 <p class="testimonial_des">“Seller did an amazing job helping me out with everything. Even changed some coding for me, free of charge which was great. Supplied some free hosting also. This seller is A++++”</p>
@@ -200,11 +200,11 @@
                                         </div>
                                     </div>
                                     <ul class="rating_star unordered_list">
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
                                     </ul>
                                 </div>
                                 <p class="testimonial_des">“customer service is very excellent and I love your software. I give it a 100% for your e-wallet, I have to give some one credit when they deserve it and you have earned it, wish you all the best with a lot of sales and success.”</p>
@@ -228,12 +228,11 @@
                                         </div>
                                     </div>
                                     <ul class="rating_star unordered_list">
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                    </ul>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
                                 </div>
                                 <p class="testimonial_des">“Its product is original and good, installs in 5 minutes, works great and is very well written code. Speed optimizations will already come minimizing, but the code is clean and clear, so that everyone can adjust it to their needs. I'm going to give you my five points and also thank you. I wish you lots of sales, I will be attentive to your new products.”</p>
                                 <span class="quote_icon">
@@ -257,11 +256,11 @@
                                         </div>
                                     </div>
                                     <ul class="rating_star unordered_list">
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
                                     </ul>
                                 </div>
                                 <p class="testimonial_des">“Awesome Features. Fantastic user interface. Everything is running very nicely on my website. I just purchased today and got some issues as i m non technical person but Thesoftking provide me step to step solutions.”</p>
@@ -285,11 +284,11 @@
                                         </div>
                                     </div>
                                     <ul class="rating_star unordered_list">
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
                                     </ul>
                                 </div>
                                 <p class="testimonial_des">“Very nice design quality 5 stars cause the designer should be the best! Thanks ThemeForest to bring me that diamond work! The highest best coded and designed html files i have even seen! Purchase it and you won't regret it! Very low prices for the work that's made!”</p>
@@ -313,11 +312,11 @@
                                         </div>
                                     </div>
                                     <ul class="rating_star unordered_list">
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
-                                        <li><i class="las la-star"></i></li>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
+                                    <i class="fa-regular fa-star" style="color:yellow;"></i>
                                     </ul>
                                 </div>
                                 <p class="testimonial_des">“Everyone who but this website please be appreciative by giving this guys 5 stars.Very well design clean code and Fast, accurate support service.I must give you more than 5 star so you have 100 stars from me, well done guys keep up with your good work and very well recommended !!!”</p>

@@ -4,12 +4,12 @@
     <li class="nav-item">
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
-    <li class="nav-item d-none d-sm-inline-block">
+    <!-- <li class="nav-item d-none d-sm-inline-block">
       <a href="" class="nav-link">Home</a>
-    </li>
-    <li class="nav-item d-none d-sm-inline-block">
+    </li> -->
+    <!-- <li class="nav-item d-none d-sm-inline-block">
       <a href="{{url('/communication/form')}}" class="nav-link">Contact</a>
-    </li>
+    </li> -->
    
   </ul>
 
@@ -39,7 +39,7 @@
     <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-comments"></i>
-        <span class="badge badge-danger navbar-badge">3</span>
+        <span class="badge badge-danger navbar-badge"></span>
       </a>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <a href="#" class="dropdown-item">
@@ -49,7 +49,7 @@
         <a href="#" class="dropdown-item">
 
           <div class="media">
-            <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="https://i.ibb.co/3Bp4tM8/users.png" alt="" class="img-size-50 img-circle mr-3">
             <div class="media-body">
               <h3 class="dropdown-item-title">
                 John Pierce
@@ -65,7 +65,7 @@
         <a href="#" class="dropdown-item">
 
           <div class="media">
-            <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="" alt="User Avatar" class="img-size-50 img-circle mr-3">
             <div class="media-body">
               <h3 class="dropdown-item-title">
                 Nora Silvester
@@ -85,9 +85,9 @@
     <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-bell"></i>
-        <span class="badge badge-warning navbar-badge">15</span>
+        <span class="badge badge-warning navbar-badge"></span>
       </a>
     </li>    
   </ul>
-  <div class=" btn "></div><a class="btn text-white " href="{{route('admin.logout')}}">Logout</a>
+  <div class=" btn "></div><a class="btn text-white " href="{{route('admin.logout')}}"><i class="fa fa-sign-out text-white mr-1" aria-hidden="true"></i>Logout</a>
 </nav>
