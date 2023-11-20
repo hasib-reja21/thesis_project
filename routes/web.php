@@ -26,6 +26,7 @@ Route::get('/single-product/{id}',[FrontendProductController::class,'singleProdu
 
 Route::group(['middleware'=>'auth'],function(){
     Route::get('/logout',[CustomerController::class, 'logout'])->name('customer.logout');
+    Route::get('/profile',[CustomerController::class,'profile' ])->name('profile.view');
 });
 
 

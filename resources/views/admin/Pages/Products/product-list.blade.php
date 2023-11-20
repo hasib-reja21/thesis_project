@@ -29,7 +29,7 @@
         <tr class="text-center">
           <th scope="col"class="border">ID</th>
           <th scope="col"class="border">Product Name</th>
-          <th scope="col"class="border">Category</th>
+          <th scope="col"class="border">Category Type</th>
           <th scope="col"class="border">Image</th>
           <th scope="col"class="border">Price</th>
           <th scope="col"class="border">Description</th>
@@ -40,11 +40,13 @@
         </tr>
       </thead>
       <tbody>
+        <!-- showed the product in the table -->
+
         @foreach ($products as $key=>$product )
         <tr class="text-center"class="border">
           <th scope="row">{{$key+1}}</th>
           <td>{{$product->Product_Name}}</td>
-          <td>{{$product->category_id}}</td>
+          <td>{{$product->category->name}}</td>
           <td>
             <img  src="{{url('/uploads//'.$product->Product_Image)}}" alt="">
           </td>

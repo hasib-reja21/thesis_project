@@ -53,4 +53,7 @@ class CustomerController extends Controller
         auth()->logout();
         return redirect()->route('frontend.home');
     }
+    public function profile(){
+        return view('admin.Frontend.Pages.profile-view');
+    }
 }

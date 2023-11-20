@@ -16,6 +16,8 @@
 
         <div class="row justify-content-center gy-4 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.7s">
             @foreach ($products as $product )
+            <!-- ancore tag -->
+            
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                 <div class="service_item style_1 shadow" style="text-align: left">
                     <div class="auction-thumb">
@@ -26,6 +28,7 @@
                     <div>
                         <h5 class="title mt-2 text-left">
                             <a href="#0">{{$product->Product_Name}}</a>
+                            
                         </h5>
                         <hr class="mt-2">
                         <div class="d-flex gap-5 ">
@@ -62,6 +65,7 @@
                     </div>
                 </div>
             </div>
+            <!-- ancore tag close -->
             @endforeach
         </div>
         

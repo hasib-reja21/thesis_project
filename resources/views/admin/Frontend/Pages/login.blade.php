@@ -21,7 +21,7 @@
 <body>
 
     <section class="account-section">
-        <div class="left bg_img" style="background-image: url('https://i.ibb.co/TWvs9vx/bid7.jpg');">
+        <div class="left bg_img" style="background-image: url('https://i.ibb.co/HdtJfxM/bid6.jpg');">
             <div class="left-inner text-center">
                 <h6 class="text--base">Welcome Back!</h6>
                 <h2 class="title text-white">Sign In to your account</h2>

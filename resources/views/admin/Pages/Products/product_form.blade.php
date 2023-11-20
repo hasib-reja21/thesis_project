@@ -41,7 +41,7 @@
                 </div> -->
                 <div class="form-group">
                     <label for="productName">Select Category</label>
-                    <select class="form-control   name="category_Name" required>
+                    <select class="form-control"   name="category_id" required>
 
                         //for dropdown oprion
                         @foreach ($categories as $category )

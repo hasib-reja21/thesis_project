@@ -45,7 +45,7 @@
 
                         <!-- category dropdown -->
                         @foreach ($categories as $category )
-                        <option  value="{{$category-id }}">{{$category->name}}</option>
+                        <option  value="">{{$category->name}}</option>
                         <!-- @if($product->category_id==$category->id) selected @endif -->
                         @endforeach
                     </select>

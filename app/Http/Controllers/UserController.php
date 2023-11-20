@@ -28,6 +28,7 @@ class UserController extends Controller
             $login=auth()->attempt($credentials);
             if($login)
             {
+            
                return redirect()->route('dashboard');
             }
 

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,11 +47,11 @@
     <!-- head-body section -->
     @include('admin.Frontend.Partials.head-body')
 
-
+        
     <!-- product body section -->
-    @include('admin.Frontend.Partials.product-body')
+     @include('admin.Frontend.Partials.product-body') 
 
-    @yield('content')
+ 
      <!-- main body section -->
     @include('admin.Frontend.Partials.main-body')
 

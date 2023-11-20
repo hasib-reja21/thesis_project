@@ -25,7 +25,8 @@
                             @endguest
 
                             @auth
-                            <li><a href="{{route('customer.logout')}}"><i class="fa fa-sign-out text-white" aria-hidden="true"></i>Logout</a></li>
+                            <li><a href="{{route('customer.logout')}}"><i class="fa fa-sign-out text-white" aria-hidden="true"></i>Sign out | </a></li>
+                            <a href="{{route('profile.view')}}">{{auth()->user()->name}}</a>
                             @endauth
                             
                             

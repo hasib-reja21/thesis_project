@@ -20,7 +20,7 @@
 <body>
 
     <section class="account-section style--two">
-        <div class="left bg_img" style="background-image: url('https://i.ibb.co/SRTLdcY/bid.jpg');">
+        <div class="left bg_img" style="background-image: url('https://i.ibb.co/b6L5JS2/login.jpg');">
             <div class="left-inner text-center">
                 <h6 class="text--base">Welcome</h6>
                 <h2 class="title text-white">Create an Account</h2>
