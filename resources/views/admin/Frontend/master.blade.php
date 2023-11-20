@@ -15,7 +15,7 @@
         }
     </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="shortcut icon" href="https://thesoftking.com/assets/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="https://i.ibb.co/PtgJv80/icon.jpg" type="image/png">
     <link rel="stylesheet" href="https://thesoftking.com/assets/css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="https://thesoftking.com/assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://thesoftking.com/assets/css/lib/slick.css">
@@ -27,12 +27,12 @@
 </head>
 
 <body>
-    <!-- <div class="preloader">
+    <div class="preloader">
         <div class="preloader__content">
             <h3 class="preloader__text">ABS</h3>
             <div class="preloader__circle"></div>
         </div>
-    </div> -->
+    </div>
     <div class="scroll-to-top">
         <span class="scroll-icon">
             <i class="fa-solid fa-arrow-up"></i>
@@ -42,7 +42,7 @@
     <!-- header section -->
     @include('admin.Frontend.Partials.webheader')
 
-
+    @yield('content')
    
     <!-- head-body section -->
     @include('admin.Frontend.Partials.head-body')
