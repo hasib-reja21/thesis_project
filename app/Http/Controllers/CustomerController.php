@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -54,6 +56,7 @@ class CustomerController extends Controller
         return redirect()->route('frontend.home');
     }
     public function profile(){
-        return view('admin.Frontend.Pages.profile-view');
+        $products=Product::all();
+        return view('admin.Frontend.Pages.profile-view',compact('products'));
     }
 }

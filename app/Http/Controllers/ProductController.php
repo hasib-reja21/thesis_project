@@ -88,6 +88,11 @@ class ProductController extends Controller
       return redirect()->back()->with('success', 'Product updated successfully');
     }
   }
+  //view the product
+  public function view($id){
+    $product = Product::find($id);
+    return view('admin.Pages.Products.product-view', compact('product'));
+  }
   //delete the product
   public function delete($id)
   {

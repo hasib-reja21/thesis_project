@@ -9,6 +9,6 @@ class HomeController extends Controller
 {
     public function home(){
         $products=Product::all();
-        return view('admin.Frontend.master',compact('products'));
+        return view('admin.Frontend.Partials.home-dashboard',compact('products'));
     }
 }

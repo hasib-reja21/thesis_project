@@ -1,7 +1,7 @@
 <header class="header sticky">
-    <div class="header__top">
-        <div class="container-xl">
-            <div class="row">
+    <div class="header__top ">
+        <div class="container-xl ">
+            <div class="row ">
                 <div class="col-sm-7">
                     <ul class="header__info-list d-flex flex-wrap align-items-center justify-content-sm-start justify-content-center">
                         <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><i class="fa-solid fa-envelope text-white"></i> <span class="__cf_email__" data-cfemail="95e6faf3e1e2f4e7f0d5e1fdf0e6faf3e1fefcfbf2bbf6faf8">[email&#160;protected]</span></a></li>
@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div class="header__bottom">
+    <!-- <div class="header__bottom ">
         <div class="container-xl">
             <nav class="navbar navbar-expand-lg p-0 align-items-center">
                 <a class="site-logo site-title" href="#">
@@ -90,5 +90,5 @@
                 </div>
             </nav>
         </div>
-    </div>
+    </div> -->
 </header>
