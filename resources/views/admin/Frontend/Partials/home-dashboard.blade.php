@@ -75,7 +75,7 @@
                             </div>
                             <span class="total-bids"><span style="color: orange;">|</span> 30 Bids</span>
                         </div>
-                        <div class="text-center" style="text-align: right !important;">
+                        <div class="text-center" style="text-align: left !important;">
                             <button class="btn btn-success text-white mt-5 "><a href="">Bid Now</a></button>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
 
     </div>
 </section>
-<section class="pt-100 pb-100 section-bg-common">
+<!-- <section class="pt-100 pb-100 section-bg-common">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xxl-7 col-lg-8 col-md-11">
@@ -115,7 +115,7 @@
                     <div class="overview-item__icon wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.3s">
                         <img src="https://i.ibb.co/znGJjNv/program.png" alt="">
                     </div>
-                    <h4 class="overview-item__amount counter"><span class="odometer" data-odometer-final="100">0</span>+ </h4>
+                    <h4 class="overview-item__amount counter"><span class="odometer" data-odometer-final="No products"></span>+ </h4>
                     <div class="overview-item__content wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
                         <h4 class="overview-item__title">Unique Items</h4>
                     </div>
@@ -145,7 +145,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="pt-100 pb-100 section-bg-common">
     <div class="container">

@@ -19,15 +19,13 @@
     <link rel="stylesheet" href="https://thesoftking.com/assets/css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="https://thesoftking.com/assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://thesoftking.com/assets/css/lib/slick.css">
-    <link rel="stylesheet" href="https://thesoftking.com/assets/css/lib/odometer.css">
+    <!-- <link rel="stylesheet" href="https://thesoftking.com/assets/css/lib/odometer.css"> -->
     <link rel="stylesheet" href="https://thesoftking.com/assets/css/lightcase.css">
     <link rel="stylesheet" href="https://thesoftking.com/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     @notifyCss
     <style>
-        body {
-            background: rgb(99, 39, 120)
-        }
+      
 
         .form-control:focus {
             box-shadow: none;
@@ -106,10 +104,9 @@
     <!-- header section -->
     @include('admin.Frontend.Partials.webheader')
 
-      @yield('content')
-   
     
-
+        @yield('content')
+   
     <!-- footer section -->
     @include('admin.Frontend.Partials.footer')
 

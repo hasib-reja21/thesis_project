@@ -6,7 +6,9 @@
                     <ul class="header__info-list d-flex flex-wrap align-items-center justify-content-sm-start justify-content-center">
                         <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><i class="fa-solid fa-envelope text-white"></i> <span class="__cf_email__" data-cfemail="95e6faf3e1e2f4e7f0d5e1fdf0e6faf3e1fefcfbf2bbf6faf8">[email&#160;protected]</span></a></li>
                         <li><a href="#"><i class="fa-brands fa-whatsapp text-white"></i> +8801825132226</a></li>
+
                     </ul>
+                    
                 </div>
                 <div class="col-sm-5 mt-sm-0 mt-2">
                     <ul class="header__info-list d-flex flex-wrap align-items-center justify-content-sm-end justify-content-center">
@@ -31,10 +33,12 @@
             </div>
         </div>
     </div>
-    <!-- <div class="header__bottom ">
+    <div class="header__bottom ">
         <div class="container-xl">
             <nav class="navbar navbar-expand-lg p-0 align-items-center">
-                <a class="site-logo site-title" href="#">
+                <a class="site-logo site-title mt-2 ml-5" href="#">
+                <img class="" style="border-radius: 10px; height:70px; width:70px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt="THESOFTKING"> 
+                <!-- https://i.ibb.co/KrPmbhr/abs-2.jpg -->
 
                 </a>
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,5 +94,5 @@
                 </div>
             </nav>
         </div>
-    </div> -->
+    </div>
 </header>

@@ -58,8 +58,10 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('product/edit/{id}',[ProductController::class, 'edit'])->name('product.edit');
     Route::put('product/update/{id}',[ProductController::class, 'update'])->name('product.update');
     Route::get('product/view/{id}',[ProductController::class, 'view'])->name('product.view');
-
     Route::post("/product/store",[ProductController::class,'store'])->name('product.store');
+
+    //user controllers
+    Route::get('/user/list',[UserController::class, 'list'])->name('user.list');
 
 
 });

@@ -30,14 +30,19 @@
 
 <body>
 
+
     <section>
 
         <div class="vh-100"  ">
+        
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-12 col-md-8 col-lg-6 col-xl-5" id="animated-content">
                         <div class="card shadow-2-strong" style="border-radius: 1rem;">
                             <div class="card-body p-5 text-center">
+                            <div class="text-center">
+                <a href="#"><img style="border-radius: 10px; height:70px; width:70px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt="logo"></a>
+            </div>
 
                                 <h3 class="mb-5">Sign in</h3>
 

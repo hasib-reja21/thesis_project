@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    
-   
+
+
 
     <link rel="canonical" href="https://thesoftking.com/login" />
-    
+
 
     <link rel="shortcut icon" href="https://thesoftking.com/assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://thesoftking.com/assets/css/lib/bootstrap.min.css">
@@ -19,7 +19,8 @@
 </head>
 
 <body>
-
+    v>
+    </div>
     <section class="account-section">
         <div class="left bg_img" style="background-image: url('https://i.ibb.co/HdtJfxM/bid6.jpg');">
             <div class="left-inner text-center">
@@ -29,20 +30,20 @@
                     <br> <a href="{{route('customer.registration')}}" class="text--base">Register Now!</a>
                 </p>
                 <h4 class="text-white mt-5 mb-3">We are involved with</h4>
-                
-                
+
+
             </div>
         </div>
-        
+
         <div class="right">
-        
-            <div class="el"><img src="" alt="image"></div>
-            <div class="top w-100 text-center">
-                <a href=""><img src="" alt=""></a>
+
+            <div class="el"><img src="https://thesoftking.com/assets/images/bg/account-el.png" alt="image"></div>
+            <div class="text-center">
+                <a href="#"><img style="border-radius: 10px; height:90px; width:100px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt="logo"></a>
             </div>
             <div class="middle w-100">
 
-             <div>
+                <div>
                     @if (Session::has('success'))
                     <div class="alert alert-success">
                         {{Session::get('success')}}
@@ -50,7 +51,7 @@
 
                     @endif
                 </div>
-            <!-- <div>
+                <!-- <div>
                     @if (Session::has('error'))
                     <div class="alert alert-danger">
                         {{Session::get('error')}}
@@ -63,9 +64,9 @@
 
                     @csrf
                     <div class="form-group">
-                    
+
                         <label> Email</label>
-                        <input type="email"  name="email"  class="form--control" placeholder="Username or Email" required>
+                        <input type="email" name="email" class="form--control" placeholder="Username or Email" required>
                     </div>
                     <div class="form-group">
                         <label>Password</label>

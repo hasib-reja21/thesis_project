@@ -21,7 +21,7 @@
         @endif
     </div>
     <div class="container ">
-        <h4 class="shadow p-2 text-uppercase col-12 text-center py-3 mb-3">add product</h4>
+        <h4 class="shadow p-2 text-uppercase col-12 text-center py-3 mb-3" style="font-family: 'Courier New', Courier, monospace;">add product</h4>
         <div class="d-flex justify-content-center border py-1 ">
             <form action="{{route('product.store')}}" method="POST" class="w-100 mr-3 ml-3 mt-3 mb-3 col-9" enctype="multipart/form-data">
                 @csrf

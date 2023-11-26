@@ -18,6 +18,12 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="preloader__content">
+            <h3 class="preloader__text">ABS</h3>
+            <div class="preloader__circle"></div>
+        </div>
+    </div>
 
     <section class="account-section style--two">
         <div class="left bg_img" style="background-image: url('https://i.ibb.co/b6L5JS2/login.jpg');">
@@ -30,6 +36,10 @@
         </div>
 
         <div class="right">
+            <div class="el"><img src="https://thesoftking.com/assets/images/bg/account-el.png" alt="image"></div>
+            <div class="text-center">
+                <a href="#"><img style="border-radius: 10px; height:70px; width:70px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt="logo"></a>
+            </div>
             <div class="middle w-100">
 
                 <div>
@@ -40,7 +50,7 @@
 
                     @endif
                 </div>
-                
+
                 <!-- @include('notify::components.notify') -->
                 <form class="account-form" action="{{route('customer.store')}}" method="post">
                     @csrf

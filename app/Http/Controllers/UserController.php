@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Models\User;
 
 class UserController extends Controller
+
 {
+    public function list(){
+        $users = User::all();
+        return view('admin.Pages.User.users-list',compact('users'));
+    }
+
     public function loginForm(){
         return view('admin.Pages.login');
     }
