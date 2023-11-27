@@ -8,19 +8,19 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function List(){
-        return view('Admin.Pages.Category.list');
-    }
+    // public function List(){
+    //     return view('admin.Pages.Category.list');
+    // }
    
     public function View(){
         //view data at the view page through model
         $categories=Category::paginate(8);
 
-        return view('Admin.Pages.Category.view-category',compact('categories'));
+        return view('admin.Pages.Category.view-category',compact('categories'));
     } 
     //return the category form at view page
     public function createForm(){
-        return view('Admin.Pages.Category.categoryform');
+        return view('admin.Pages.Category.categoryform');
     }
     //query for store the data at the database
     public function store(Request $request){

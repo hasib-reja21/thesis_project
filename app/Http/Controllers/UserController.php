@@ -9,10 +9,7 @@ use App\Models\User;
 class UserController extends Controller
 
 {
-    public function list(){
-        $users = User::all();
-        return view('admin.Pages.User.users-list',compact('users'));
-    }
+  
 
     public function loginForm(){
         return view('admin.Pages.login');
@@ -45,5 +42,48 @@ class UserController extends Controller
             auth()->logout();
             return redirect()->route('admin.login');
         }
+
+        public function list(){
+            $users = User::all();
+            return view('admin.Pages.User.users-list',compact('users'));
+        }
+
+        public function store(Request $request)
+        {  
+            dd($request->all());
+            $validate=Validator::make($request->all(),[
+                'user_name'=>'required',
+                'role'=>'required',
+                'user_email'=>'required|email',
+                'user_password'=>'required|min:6',
+            ]);
     
-  }
+            if($validate->fails())
+            {
+                return redirect()->back()->with('myError',$validate->getMessageBag());
+            }
+    
+            $fileName=null;
+            if($request->hasFile('user_image'))
+            {
+                $file=$request->file('user_image');
+                $fileName=date('Ymdhis').'.'.$file->getClientOriginalExtension();
+               
+                $file->storeAs('/uploads',$fileName);
+    
+            }
+    
+           
+            User::create([
+                'name'=>$request->user_name,
+                'role'=>$request->role,
+                'image'=>$fileName,
+                'email'=>$request->user_email,
+                'password'=>bcrypt($request->user_password),
+            ]);
+    
+            return redirect()->back()->with('message','User created successfully.');
+    
+    
+        }
+    }

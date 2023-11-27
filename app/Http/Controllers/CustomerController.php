@@ -16,6 +16,7 @@ class CustomerController extends Controller
         // dd($request->all());
         User::create([
             'name'=>$request->name,
+            'role'=>$request->role,
             'email'=>$request->email,
             'password'=>bcrypt($request->password)
 

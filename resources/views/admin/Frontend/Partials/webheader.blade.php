@@ -37,7 +37,7 @@
         <div class="container-xl">
             <nav class="navbar navbar-expand-lg p-0 align-items-center">
                 <a class="site-logo site-title mt-2 ml-5" href="#">
-                <img class="" style="border-radius: 10px; height:70px; width:70px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt="THESOFTKING"> 
+                <!-- <img class="" style="border-radius: 10px; height:70px; width:70px;" src="#" alt="">  -->
                 <!-- https://i.ibb.co/KrPmbhr/abs-2.jpg -->
 
                 </a>

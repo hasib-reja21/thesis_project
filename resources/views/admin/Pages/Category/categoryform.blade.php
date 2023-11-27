@@ -38,24 +38,21 @@
                   <form action="{{route('category.store')}}" method="post">
                     @csrf
                     
-                    <div class="col-12 col-md-6 mb-4 mt-4">
+                    <div class="col-12 col-md-6 mb-4 mt-4 ml-5 ">
                       <label class="form-label" for="form6Example3">Categotyy name:</label>
-                      <input type="text" id="form6Example3" class="form-control"
+                      <input type="text" id="form6Example3" class="form-control "
                         name="category_name" placeholder="Enter Category Name..."/>
-                    
                     </div>
 
-                    <div class="form-outline mb-4">
+                    <div class="form-outline col-12 col-md-6 mb-4 mt-4 ml-5">
                       <label class="form-label" for="form6Example7">Category Discription:</label>
-                      <textarea class="form-control" id="form6Example7" name="description_name" rows="2" placeholder="Write Your description !"></textarea>
-                    
+                      <textarea class="form-control" id="form6Example7" name="description_name" rows="2" placeholder="Write Your description !"></textarea>                   
                     </div>
                 
                     <div class="col text-center">
-                    <button type="submit" class="btn btn-secondary btn-rounded ">Add Category</button>
+                      <button type="submit" class="btn btn-secondary btn-rounded mr-5 ">Add Category</button>
                     </div>
-                  </form>`
-
+                  </form>
               </div>
             </div>
           </div>

@@ -35,12 +35,16 @@ Route::group(['middleware'=>'auth'],function(){
 
 // admin controllers
 
-Route::get('/admin/login',[UserController::class,'loginForm'])->name('admin.login');
-Route::post('/login-form-post',[UserController::class,'loginPost'])->name('admin.login.post');
 
-Route::group(['middleware'=>'auth'],function(){
+ Route::get('/admin/login',[UserController::class,'loginForm'])->name('admin.login');
+ Route::post('/login-form-post',[UserController::class,'loginPost'])->name('admin.login.post');
+
+ Route::group(['middleware'=>'auth'],function(){
+    Route::group(['middleware' => 'CheckAdmin'], function () {
 
     Route::get('/admin/logout',[UserController::class, 'logout'])->name('admin.logout');
+    Route::get('/user/list',[UserController::class, 'list'])->name('user.list');
+    Route::post('/user/store',[UserController::class, 'store'])->name('user.store');
     Route::get("/",[DashboardController::class,'dashboard'])->name('dashboard');
 
     // category controllers
@@ -61,9 +65,10 @@ Route::group(['middleware'=>'auth'],function(){
     Route::post("/product/store",[ProductController::class,'store'])->name('product.store');
 
     //user controllers
-    Route::get('/user/list',[UserController::class, 'list'])->name('user.list');
+    
+ });
 
+ });
 
-});
 
 
