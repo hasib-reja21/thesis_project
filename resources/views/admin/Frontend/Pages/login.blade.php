@@ -5,7 +5,7 @@
 
 
 
-    <link rel="canonical" href="https://thesoftking.com/login" />
+    <link rel="canonical" href="https://thesoftking.com/login">
 
 
     <link rel="shortcut icon" href="https://thesoftking.com/assets/images/favicon.png" type="image/png">
@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    v>
+    
     </div>
     <section class="account-section">
         <div class="left bg_img" style="background-image: url('https://i.ibb.co/HdtJfxM/bid6.jpg');">
@@ -43,23 +43,8 @@
             </div>
             <div class="middle w-100">
 
-                <div>
-                    @if (Session::has('success'))
-                    <div class="alert alert-success">
-                        {{Session::get('success')}}
-                    </div>
-
-                    @endif
-                </div>
-                <!-- <div>
-                    @if (Session::has('error'))
-                    <div class="alert alert-danger">
-                        {{Session::get('error')}}
-                    </div>
-
-                    @endif
-                </div>  -->
-                <!-- @include('notify::components.notify') -->
+                 <h3 class="text-white" style="text-align:center; font-family: 'Courier New', Courier, monospace;">User Login</h3>
+           
                 <form class="account-form" action="" method="post">
 
                     @csrf
@@ -78,10 +63,10 @@
                 </form>
 
                 <div class="text-center mt-5">
-                    <!-- <p>
+                    <p>
                         Having trouble logging in? Forgot your password? You can reset your password anytime. <br>
                         <a class="text--base" href="https://thesoftking.com/user/password/reset"> Reset Now!</a>
-                    </p> -->
+                    </p>
                 </div>
             </div>
             <div class="bottom w-100 text-center">

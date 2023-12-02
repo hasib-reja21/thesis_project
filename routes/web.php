@@ -14,6 +14,7 @@ use App\Http\Controllers\UserController;
 // frontend  controllers 
 
 Route::get("/www.auction.bid.com",[HomeController::class,'home'])->name('frontend.home');
+Route::get('/search-product',[HomeController::class,'search'])->name('product.search');
 
 Route::get('/registration',[CustomerController::class,'registration'])->name('customer.registration');
 Route::post('/registration',[CustomerController::class, 'store'])->name('customer.store');

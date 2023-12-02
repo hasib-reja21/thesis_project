@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+@notifyCss
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Auction</title>
@@ -90,18 +91,28 @@
       }(w, d, "zarazData", "script");
     })(window, document);
   </script>
+  
+ <style>
+  .notify{
+    z-index: 9999;
+    justify-content: center;
+  }
+ </style>
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
+ 
+  
   <div class="wrapper">
     <div class="preloader flex-column justify-content-center align-items-center">
 
     </div>
-
-
+     
+    
     <!-- for navheader -->
     @include('admin.partial.navheader')
-
+    
 
 
     <!-- for side nav -->
@@ -116,7 +127,7 @@
             </div>
           </div>
 
-
+          @include('notify::components.notify')
           <!-- allocate for pages -->
          @yield('content')
 
@@ -187,7 +198,7 @@
   <script src="https://adminlte.io/themes/v3/dist/js/pages/dashboard.js"></script>
 
 
-
+  @notifyJs
 </body>
 
 </html>

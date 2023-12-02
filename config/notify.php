@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'theme' => env('NOTIFY_THEME', 'dark'),
+    'theme' => env('NOTIFY_THEME', 'light'),
 
     /*
     |--------------------------------------------------------------------------
@@ -44,6 +44,12 @@ return [
             'model' => 'connect',
             'title' => 'User Updated',
         ],
+    ],
+    'user-deleted' => [
+        'message' => 'The user has been deleted successfully.',
+        'type'    => 'error',
+        'model'   => 'connect',
+        'title'   => 'User Deleted',
     ],
 
 ];

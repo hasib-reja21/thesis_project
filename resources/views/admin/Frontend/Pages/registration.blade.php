@@ -51,7 +51,7 @@
                     @endif
                 </div>
 
-                <!-- @include('notify::components.notify') -->
+                <h3 class="text-white mb-4" style="text-align:center; font-family: 'Courier New', Courier, monospace;">User Registration</h3>
                 <form class="account-form" action="{{route('customer.store')}}" method="post">
                     @csrf
 

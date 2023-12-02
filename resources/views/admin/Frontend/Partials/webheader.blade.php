@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* .mt-lg-0{
+           transform: translateY(-63px);
+         } */
+    </style>
+</head>
+<body>
 <header class="header sticky">
     <div class="header__top ">
         <div class="container-xl ">
@@ -20,7 +33,7 @@
                                 </a>
                             </li> -->
                         @guest
-                        <li><a href="{{route('customer.login')}}"><i class="fa fa-sign-out text-white  aria-hidden=" true"></i>Login </a></li>
+                        <li><a href="{{route('customer.login')}}"><i class="fa fa-sign-out text-white"  aria-hidden=" true"></i>Login </a></li>
                         <li><a href="{{route('customer.registration')}}"><i class="fa-solid fa-user text-white  "></i>Register</a></li>
                         @endguest
 
@@ -96,3 +109,5 @@
         </div>
     </div>
 </header>
+</body>
+</html>

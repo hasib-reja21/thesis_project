@@ -62,11 +62,12 @@ class ProductController extends Controller
       'Product_Image' => $fileName
     ]);
     //  dd($data);
-    return redirect()->back()->with('success', 'product created Successfully!!');
+    notify()->success('Product created Successfull!');
+    return redirect()->route('product.list');
   }
   //update the product
   public function update(Request $request, $id)
-   {
+  {
     $product = Product::find($id);
     if ($product) {
       $fileName = $product->Product_Image;
@@ -78,18 +79,19 @@ class ProductController extends Controller
       }
       $product->update([
         'Product_Name' => $request->product_Name,
-        'brand_id' => $request->brand_Name,
         'category_id' => $request->category_Name,
         'Product_Description' => $request->product_Description,
         'Product_Price' => $request->product_Price,
         'Product_Image' => $fileName
 
       ]);
-      return redirect()->back()->with('success', 'Product updated successfully');
+      notify()->success('Product updated successfully.');
+      return redirect()->back();
     }
   }
   //view the product
-  public function view($id){
+  public function view($id)
+  {
     $product = Product::find($id);
     return view('admin.Pages.Products.product-view', compact('product'));
   }
@@ -98,8 +100,10 @@ class ProductController extends Controller
   {
     $product = Product::find($id);
     if ($product) {
+
       $product->delete();
     }
+    notify()->success('Product Deleted Successfully.');
     return redirect()->back();
   }
 }

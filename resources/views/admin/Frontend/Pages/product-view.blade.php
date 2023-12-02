@@ -26,11 +26,11 @@
                         <h5 class="card-title">Product Price: {{$singleProduct->Product_Price}}</h5>
                         <div class="d-flex gap-5 justify-content-center align-items-center">
 
-                        <div class="form-group col-sm-7">
-                            <label></label>
-                            <input type="number" name="amount" class="border p-2 rounded" placeholder="Your amount...">
-                            
-                        </div>
+                          <div class="form-group col-sm-7">
+                              <label></label>
+                              <input type="number" name="amount" class="border p-2 rounded" placeholder="Your amount...">
+                              
+                          </div>
                             <div class="col-3"> <a href="" class="btn btn-outline-success btn-sm p-2 mt-2">Bid Now</a></div>
                          </div>
                     </div>

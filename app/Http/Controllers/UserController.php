@@ -32,15 +32,17 @@ class UserController extends Controller
             $login=auth()->attempt($credentials);
             if($login)
             {
-            
+                notify()->success('Login Successfull!');
                return redirect()->route('dashboard');
             }
-
-           return redirect()->back()->withErrors('invalid user email or password');
+           
+            return redirect()->back()->withErrors('Invalid user or password');
      }
         public function logout(){
+            
             auth()->logout();
             return redirect()->route('admin.login');
+            notify()->success('Logout successfull');
         }
 
         public function list(){

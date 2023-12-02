@@ -41,12 +41,12 @@
                 </div> -->
                 <div class="form-group">
                     <label for="productName">Select Category</label>
-                    <select class="form-control   name="category_Name" required>
+                    <select class="form-control" name="category_Name" required>
 
                         <!-- category dropdown -->
                         @foreach ($categories as $category )
-                        <option  value="">{{$category->name}}</option>
-                        <!-- @if($product->category_id==$category->id) selected @endif -->
+                        <option @if ($product->category_id == $category->id) selected @endif
+                           value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
                     </select>
                 </div>
