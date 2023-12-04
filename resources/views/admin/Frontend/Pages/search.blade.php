@@ -11,7 +11,7 @@
                     <div class="section-header text-center">
                         <h2 class="section-title ">Bid On These Featured Auctions!</h2>
                     </div>
-                    <h2 class="mb-3" style="text-align:left;">Search result for : {{ request()->search }} found {{$products->count()}} products.</h2>
+                    <h2 class="mb-3" style="text-align:left;"><strong>Search result for</strong> : {{ request()->search }} found {{$products->count()}} products.</h2>
                 </div>
             </div>
            
@@ -43,16 +43,7 @@
                                         <!-- <div class="amount"></div> -->
                                     </div>
                                 </div>
-                                <!-- <div class="d-flex">
-                                <div class="icon">
-                                    <i class="flaticon-money"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Buy Now</div>
-                                    <div class="amount">$5,00.00</div>
-                                </div>
-                            </div> -->
-
+                            
                             </div>
 
                             <div class="d-flex justify-content-between">
@@ -75,7 +66,7 @@
                 @endforeach
                    
                 @else
-                <h1 class="mb-5 text-center fw-800"> Product not found.</h1>
+                <h1 class="mb-5 text-center fw-800"><strong>Product not found.</strong></h1>
             @endif
 
             </div>

@@ -68,6 +68,7 @@ class ProductController extends Controller
   //update the product
   public function update(Request $request, $id)
   {
+    dd($request->all());
     $product = Product::find($id);
     if ($product) {
       $fileName = $product->Product_Image;

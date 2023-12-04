@@ -52,7 +52,7 @@
                 </div>
 
                 <h3 class="text-white mb-4" style="text-align:center; font-family: 'Courier New', Courier, monospace;">User Registration</h3>
-                <form class="account-form" action="{{route('customer.store')}}" method="post">
+                <form class="account-form" action="{{route('customer.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
 
                     <div class="row">
@@ -60,9 +60,18 @@
                         <div class="form-group col-sm-6">
                             <label>Name</label>
                             <input required type="text" name="name" value="" autocomplete="off" class="form--control" placeholder="Enter your Name...">
+        
+                        </div>
 
-                            <label>Role</label>
+                        <div class="form-group col-sm-6">
+                        <label>Role</label>
                             <input required type="text" name="role" value="" autocomplete="off" class="form--control" placeholder="Role...">
+
+                        </div>
+                        <div class="form-group col-sm-6">
+                        <label>User Image</label>
+                            <input required type="file" name="image" value="" autocomplete="off" class="form--control" placeholder="User image...">
+
                         </div>
 
 

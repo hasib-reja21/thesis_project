@@ -5,20 +5,21 @@
     <div class="row">
         <div class="col-md-3 border-right">
             <div class=" profile-img d-flex flex-column align-items-center text-center p-3 py-5">
-                <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
-                <span class="font-weight-bold ">Edogaru</span><span class="text-black-50">
+                <img class="rounded-circle mt-5" width="150px" src="{{url('/uploads//'.auth()->user()->image)}}">
+                <span class="font-weight-bold ">{{ auth()->user()->name }}</span><span class="text-black-50">
                     {{ auth()->user()->email }}
                 </span><span> </span>
 
                 <div class="file btn btn-lg btn-primary mt-3">
                     Change Photo
-                    <input type="file" name="file" />
+                    <input type="file" name="file">
+                    
                 </div>
             </div>
         </div>
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-3 mt-3">
                     <h4 class="text-right">Profile Settings</h4>
                 </div>
                 <div class="row mt-2">

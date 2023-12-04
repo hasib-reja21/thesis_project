@@ -26,7 +26,7 @@
       @endif
     </div>
     <h1 class="mb-3 ml-3" style="font-family: 'Courier New', Courier, monospace;">Create new user</h1>
-    <form action="{{ route('user.store') }}" method="post">
+    <form action="{{ route('user.store') }}" method="post" enctype="multipart/form-data" >
       @csrf
       <div class="col-5 ">
         <div class="col mb-2">
@@ -34,6 +34,9 @@
         </div>
         <div class="col mb-2">
           <input type="text" name="role" class="form-control" placeholder="Enter role" required>
+        </div>
+        <div class="col mb-2">
+          <input type="file" name="image" class="form-control" placeholder="Upload yourimage" required>
         </div>
         <div class="col mb-2">
           <input type="email" name="user_email" class="form-control mb-3" placeholder="Enter your email" required>
@@ -59,6 +62,7 @@
           <th scope="col" class="border">ID</th>
           <th scope="col" class="border">User Name</th>
           <th scope="col" class="border">Role</th>
+          <th scope="col" class="border">User image</th>
           <th scope="col" class="border">Email</th>
           <th scope="col" class="border">Action</th>
         </tr>
@@ -69,6 +73,9 @@
           <th scope="row">{{$user->id}}</th>
           <td>{{$user->name}}</td>
           <td>{{$user->role}}</td>
+          <td>
+          <img  src="{{url('/uploads//'.$user->image)}}" alt="">
+          </td>
           <td>{{$user->email}}</td>
           <td>
             <a href="" class="btn btn-dark mr-3 btn-sm">Edit</a>

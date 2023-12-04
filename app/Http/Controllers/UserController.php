@@ -35,8 +35,8 @@ class UserController extends Controller
                 notify()->success('Login Successfull!');
                return redirect()->route('dashboard');
             }
-           
-            return redirect()->back()->withErrors('Invalid user or password');
+            return redirect()->back();
+            notify()->error('Invalid username or password');
      }
         public function logout(){
             
@@ -52,10 +52,11 @@ class UserController extends Controller
 
         public function store(Request $request)
         {  
-            dd($request->all());
+            // dd($request->all());
             $validate=Validator::make($request->all(),[
                 'user_name'=>'required',
                 'role'=>'required',
+                'image'=>'required',
                 'user_email'=>'required|email',
                 'user_password'=>'required|min:6',
             ]);
@@ -66,9 +67,9 @@ class UserController extends Controller
             }
     
             $fileName=null;
-            if($request->hasFile('user_image'))
+            if($request->hasFile('image'))
             {
-                $file=$request->file('user_image');
+                $file=$request->file('image');
                 $fileName=date('Ymdhis').'.'.$file->getClientOriginalExtension();
                
                 $file->storeAs('/uploads',$fileName);
@@ -83,8 +84,8 @@ class UserController extends Controller
                 'email'=>$request->user_email,
                 'password'=>bcrypt($request->user_password),
             ]);
-    
-            return redirect()->back()->with('message','User created successfully.');
+            notify()->success('User created successfull');
+            return redirect()->back();
     
     
         }

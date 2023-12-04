@@ -90,6 +90,7 @@
 </head>
 
 <body>
+    // pre loader
     <div class="preloader">
         <div class="preloader__content">
             <h3 class="preloader__text">ABS</h3>

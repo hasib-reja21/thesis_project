@@ -15,9 +15,33 @@ class CustomerController extends Controller
 
     public function store(Request $request){
         // dd($request->all());
+        $validate=Validator::make($request->all(),[
+            'name'=>'required',
+            'role'=>'required',
+            'image'=>'required',
+            'email'=>'required|email',
+            'password'=>'required|min:6',
+        ]);
+
+        if($validate->fails())
+        {
+            return redirect()->back()->with('myError',$validate->getMessageBag());
+        }
+
+        $fileName=null;
+        if($request->hasFile('image'))
+        {
+            $file=$request->file('image');
+            $fileName=date('Ymdhis').'.'.$file->getClientOriginalExtension();
+           
+            $file->storeAs('/uploads',$fileName);
+
+        }
+        // dd($fileName);
         User::create([
             'name'=>$request->name,
             'role'=>$request->role,
+            'image'=>$fileName,
             'email'=>$request->email,
             'password'=>bcrypt($request->password)
 
