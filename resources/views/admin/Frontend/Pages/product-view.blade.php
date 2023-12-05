@@ -27,28 +27,30 @@
               <h5 class="card-title">Product Price: {{$singleProduct->Product_Price}}</h5>
               <!-- <p class="card-text">{{ $singleProduct->Product_Description}}</p> -->
               <h5 class="card-title">Initial Time: {{$singleProduct->created_at}}</h5>
-
+       
               <div class="d-flex gap-5 justify-content-center align-items-center">
+                
+                <form action="{{route('bid.store', $singleProduct->id)}}" method="post" class="d-flex gap-3">
+                  @csrf
+                  <div class="">
 
-                <div class="form-group col-sm-7">
-                   <!-- Display the countdown timer -->
-                  
-                 
-                  <input type="number" name="amount" id="bidAmount" class="border p-2 rounded mt-2" placeholder="Your amount...">
-                </div>
+                    <input type="number" name="amount" id="bidAmount" class="border p-2 rounded mt-2" placeholder="Your amount..." required>
+                  </div>
 
-                <div class="col-3">
-                  <!-- No need for an <a> tag here, we'll handle the real-time generation with JavaScript -->
-                  <button class="btn btn-outline-success btn-sm p-2 mt-2" id="generateValue">Bid Now</button>
-                </div>
+                  <div class="col-3">
+
+                    <button class="btn btn-outline-success btn-sm p-2 mt-2" type="submit" id="generateValue">Bid Now</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+  
     <div class="container">
+    <h1 class="mb-3"><strong>Bidding Information</strong></h1>
       <table class="table mr-5 border ">
         <thead>
           <tr>
@@ -60,20 +62,26 @@
           </tr>
         </thead>
         <tbody>
+          
+            
+         @foreach ($biddings as $key=>$bid )
           <tr>
-            <td>1</td>
-            <td>Defaultson</td>
-            <td>1230</td>
-            <td>1</td>
-            <td>pending</td>
+            <td>{{$key+1}}</td>
+            <td>{{$bid->user_name}}</td>
+            <td>{{$bid->price}}</td>
+            <td>{{$bid->product_id}}</td>
+            <td>{{$bid->status}}</td>
           </tr>
+          @endforeach
+       
+          
         </tbody>
       </table>
     </div>
   </section>
 
   <!-- Include jQuery library -->
- 
+
 </body>
 
 </html>

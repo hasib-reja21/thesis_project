@@ -23,10 +23,12 @@ Route::get("/login",[CustomerController::class,'login'])->name('customer.login')
 Route::post("/login",[CustomerController::class,'doLogin'])->name('customer.do.login');
 
 
-Route::get('/single-product/{id}',[FrontendProductController::class,'singleProductView'])->name('single.product');
 
 Route::group(['middleware'=>'auth'],function(){
     Route::get('/logout',[CustomerController::class, 'logout'])->name('customer.logout');
+    Route::get('/single-product/{id}',[FrontendProductController::class,'singleProductView'])->name('single.product');
+    Route::post('/bid-store/{id}',[FrontendProductController::class,'store'])->name('bid.store');
+    
     Route::get('/profile',[CustomerController::class,'profile' ])->name('profile.view');
 });
 

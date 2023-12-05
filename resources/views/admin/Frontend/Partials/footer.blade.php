@@ -5,7 +5,7 @@
                 <div class="row gy-4">
                     <div class="col-lg-4 col-sm-8 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.1s">
                         <div class="footer-widget">
-                            <a href="#0" class="footer-logo"><img src="https://thesoftking.com/assets/images/footer-logo.png" alt="image"></a>
+                            <a href="#0" class="footer-logo"><img src="" alt="image"></a>
                             <p class="mt-4">Founded in 2011. Architecting secure, efficient, and user-friendly items by writing standard and well-documented codes to turn ideas into reality. Working on a daily basis to bring unique, standard, and trendy products for various marketplace and clients.</p>
                         </div>
                     </div>

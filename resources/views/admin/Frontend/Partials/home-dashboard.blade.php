@@ -185,64 +185,64 @@
         </div>
     </section>
     <!-- <section class="pt-100 pb-100 section-bg-common">
-    <div class="container">
+      <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xxl-7 col-lg-8 col-md-11">
-                <div class="section-header text-center">
-                    <h2 class="section-title">Our Statistics</h2>
-                    <p>Business statistics refers to the collection, analysis, interpretation, presentation, and application of data and statistical techniques in a business context.</p>
-                </div>
+          <div class="col-xxl-7 col-lg-8 col-md-11">
+            <div class="section-header text-center">
+              <h2 class="section-title">Our Statistics</h2>
+              <p>Business statistics refers to the collection, analysis, interpretation, presentation, and application of data and statistical techniques in a business context.</p>
             </div>
+          </div>
         </div>
 
         <div class="row gy-4">
-            <div class="col-lg-3 col-sm-6">
-                <div class="overview-item">
-                    <div class="overview-item__icon wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.3s">
-                        <img src="https://i.ibb.co/3MFnNnH/complete2.png" alt="">
-                    </div>
-                    <h4 class="overview-item__amount counter"><span class="odometer" data-odometer-final="12">0</span>+</h4>
-                    <div class="overview-item__content wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
-                        <h4 class="overview-item__title">Years Online</h4>
-                    </div>
-                </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="overview-item">
+              <div class="overview-item__icon wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInDown;">
+                <img src="assets/images/how-work-icon/complete2.png" alt="">                
+              </div>
+              <h4 class="overview-item__amount counter"><span class="odometer odometer-auto-theme" data-odometer-final="12"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span></div></span>+</h4>
+              <div class="overview-item__content wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.5s; animation-name: fadeInUp;">
+                <h4 class="overview-item__title">Years Online</h4>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="overview-item">
-                    <div class="overview-item__icon wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.3s">
-                        <img src="https://i.ibb.co/znGJjNv/program.png" alt="">
-                    </div>
-                    <h4 class="overview-item__amount counter"><span class="odometer" data-odometer-final="No products"></span>+ </h4>
-                    <div class="overview-item__content wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
-                        <h4 class="overview-item__title">Unique Items</h4>
-                    </div>
-                </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="overview-item">
+              <div class="overview-item__icon wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInDown;">
+                <img src="assets/images/how-work-icon/program.png" alt="">                
+              </div>
+              <h4 class="overview-item__amount counter"><span class="odometer odometer-auto-theme" data-odometer-final=""><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></span>+ </h4>
+              <div class="overview-item__content wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.5s; animation-name: fadeInUp;">
+                <h4 class="overview-item__title">Unique Items</h4>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="overview-item">
-                    <div class="overview-item__icon wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.3s">
-                        <img src="https://i.ibb.co/sgfh1Kf/shopping-cart.png" alt="">
-                    </div>
-                    <h4 class="overview-item__amount counter"><span class="odometer" data-odometer-final="10,000">0</span>+</h4>
-                    <div class="overview-item__content wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
-                        <h4 class="overview-item__title">Item Sold</h4>
-                    </div>
-                </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="overview-item">
+              <div class="overview-item__icon wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInDown;">
+                <img src="assets/images/how-work-icon/shopping-cart.png" alt="">                
+              </div>
+              <h4 class="overview-item__amount counter"><span class="odometer odometer-auto-theme" data-odometer-final="10,000"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></span>+</h4>
+              <div class="overview-item__content wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.5s; animation-name: fadeInUp;">
+                <h4 class="overview-item__title">Item Sold</h4>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="overview-item">
-                    <div class="overview-item__icon wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.3s">
-                        <img src="https://i.ibb.co/3Bp4tM8/users.png" alt="">
-                    </div>
-                    <h4 class="overview-item__amount counter"><span class="odometer" data-odometer-final="11000">0</span>+</h4>
-                    <div class="overview-item__content wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
-                        <h4 class="overview-item__title">Happy Clients</h4>
-                    </div>
-                </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="overview-item">
+              <div class="overview-item__icon wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInDown;">
+                <img src="assets/images/how-work-icon/users.png" alt="">                
+              </div>
+              <h4 class="overview-item__amount counter"><span class="odometer odometer-auto-theme" data-odometer-final="11000"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></span>+</h4>
+              <div class="overview-item__content wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.5s; animation-name: fadeInUp;">
+                <h4 class="overview-item__title">Happy Clients</h4>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section> -->
+      </div>
+    </section> -->
 
     <section class="pt-100 pb-100 section-bg-common">
         <div class="container">

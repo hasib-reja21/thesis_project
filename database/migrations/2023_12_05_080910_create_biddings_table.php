@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('bidding', function (Blueprint $table) {
+        Schema::create('biddings', function (Blueprint $table) {
             $table->id();
-            $table->string('User_id');
-            $table->double('Bidding_price');
-            $table->foreignId('Product_id');
+            $table->string('user_name');
+            $table->double('price');
+            $table->integer('product_id');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bidding');
+        Schema::dropIfExists('biddings');
     }
 };
