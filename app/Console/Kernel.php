@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('continuous-timer:run')->everyMinute();
     }
 
     /**
@@ -29,4 +29,9 @@ class Kernel extends ConsoleKernel
 
         require base_path('routes/console.php');
     }
+
+    // app/Console/Kernel.php
+
+
+
 }

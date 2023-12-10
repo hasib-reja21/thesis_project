@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TimerController;
 
 // frontend  controllers 
 
@@ -30,6 +31,9 @@ Route::group(['middleware'=>'auth'],function(){
     Route::post('/bid-store/{id}',[FrontendProductController::class,'store'])->name('bid.store');
     
     Route::get('/profile',[CustomerController::class,'profile' ])->name('profile.view');
+
+   
+    Route::get('/timer', [TimerController::class, 'getTimer'])->name('timer.get');
 });
 
 

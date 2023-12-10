@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
 
@@ -167,7 +168,7 @@
                                         <div id="bid_counter26">Initial time: {{ $product->created_at }} </div>
                                     </div>
                                     <!-- for countdown the time -->
-                                    <div id="countdown"></div>
+                                    <!-- <p id="countdown">Time Left:</p> -->
                                 </div>
                                 <span class="total-bids"><span style="color: orange;">|</span> 30 Bids</span>
                             </div>
@@ -520,67 +521,64 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-  $(document).ready(function() {
-    var countdownTime;
+$(document).ready(function() {
+  var countdownTime;
 
-    // Retrieve countdown time from localStorage if available
-    var storedCountdown = localStorage.getItem('countdownTime');
-    if (storedCountdown) {
-      countdownTime = parseInt(storedCountdown);
-      startCountdown(); // Start the countdown from the stored time
-    } else {
-      // Set the initial countdown time in seconds
-      countdownTime = 259200; // Change this value to your desired countdown time in seconds
-      startCountdown(); // Start the countdown
+  // Retrieve countdown time from localStorage if available
+  var storedCountdown = localStorage.getItem('countdownTime');
+  if (storedCountdown) {
+    countdownTime = parseInt(storedCountdown);
+    startCountdown(); // Start the countdown from the stored time
+  } else {
+    // Set the initial countdown time in seconds
+    countdownTime = 120; // Change this value to your desired countdown time in seconds
+    startCountdown(); // Start the countdown
+  }
+
+  // Function to start the countdown timer
+  function startCountdown() {
+    // Update the countdown timer initially
+    updateTimer();
+    // Start the countdown timer interval
+    var timerInterval = setInterval(updateTimer, 1000);
+
+    // Store countdown time in localStorage before leaving the page or refreshing
+    window.onbeforeunload = function() {
+      localStorage.setItem('countdownTime', countdownTime);
+    };
+
+    // Event listener for the button click event
+    $('#generateValue').click(function() {
+      var enteredValue = $('#bidAmount').val();
+      alert('Bid submitted with amount: ' + enteredValue);
+      // Add logic here to handle the bid submission
+    });
+  }
+
+  // Function to update the countdown timer
+  function updateTimer() {
+    $('#countdown').html('Time Left: ' + formatTime(countdownTime));
+    countdownTime--;
+     if (countdownTime < 0) {
+      clearInterval(timerInterval);
+
+      // Disable the 'Bid Now' button after the countdown expires
+      $('#generateValue').prop('disabled', true);
+      $('#countdown').html('Bid time expired!');
+      // Additional logic when the bid time expires can be added here
     }
+  }
 
-    // Function to start the countdown timer
-    function startCountdown() {
-      // Update the countdown timer initially
-      updateTimer();
-      // Start the countdown timer interval
-      var timerInterval = setInterval(updateTimer, 1000);
+  // Function to format time as minutes:seconds
+  function formatTime(seconds) {
+    var minutes = Math.floor(seconds / 60);
+    var remainingSeconds = seconds % 60;
 
-      // Store countdown time in localStorage before leaving the page or refreshing
-      window.onbeforeunload = function() {
-        localStorage.setItem('countdownTime', countdownTime);
-      };
+    return (minutes < 10 ? '0' + minutes : minutes) + 'm: ' +
+      (remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds) + 's';
+  }
 
-      // Event listener for the button click event
-      $('#generateValue').click(function() {
-        var enteredValue = $('#bidAmount').val();
-        alert('Bid submitted with amount: ' + enteredValue);
-        // Add logic here to handle the bid submission
-      });
-    }
-
-    // Function to update the countdown timer
-    function updateTimer() {
-      $('#countdown').html('Time Left: ' + formatTime(countdownTime));
-      countdownTime--;
-      if (countdownTime < 0) {
-        clearInterval(timerInterval);
-
-        // Disable the 'Bid Now' button after the countdown expires
-        $('#generateValue').prop('disabled', true);
-        $('#countdown').html('Bid time expired!');
-        // Additional logic when the bid time expires can be added here
-      }
-    }
-
-    // Function to format time as day:hour:minute:second
-    function formatTime(seconds) {
-      var days = Math.floor(seconds / (24 * 3600));
-      var hours = Math.floor((seconds % (24 * 3600)) / 3600);
-      var minutes = Math.floor((seconds % 3600) / 60);
-      var remainingSeconds = seconds % 60;
-
-      return (days > 0 ? days + ' days ' : '') +
-        (hours < 10 ? '0' + hours : hours) + 'h: ' +
-        (minutes < 10 ? '0' + minutes : minutes) + 'm: ' +
-        (remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds);
-    }
-  });
+});
 </script>
 </body>
 

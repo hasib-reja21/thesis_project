@@ -16,12 +16,14 @@ class ProductController extends Controller
     $products = Product::with('category')->paginate(5);
     return view('admin.Pages.Products.product-list', compact('products'));
   }
+
   //create product form
   public function Form()
   {
     $categories = Category::all();
     return view('admin.Pages.Products.product_form', compact('categories'));
   }
+
   //edit product
   public function edit($id)
   {
@@ -29,6 +31,7 @@ class ProductController extends Controller
     $categories = Category::all();
     return view('admin.Pages.Products.edit', compact('product', 'categories'));
   }
+
   // store the in the database
   public function store(Request $request)
   {
@@ -43,7 +46,7 @@ class ProductController extends Controller
     if ($validate->fails()) {
       return redirect()->back()->withErrors($validate);
     }
-    //for file handling
+    //for file or image handling
     $fileName = null;
     if ($request->hasFile('Product_Image')) {
 
@@ -65,6 +68,7 @@ class ProductController extends Controller
     notify()->success('Product created Successfull!');
     return redirect()->route('product.list');
   }
+
   //update the product
   public function update(Request $request, $id)
   {
@@ -90,12 +94,14 @@ class ProductController extends Controller
       return redirect()->back();
     }
   }
+
   //view the product
   public function view($id)
   {
     $product = Product::find($id);
     return view('admin.Pages.Products.product-view', compact('product'));
   }
+  
   //delete the product
   public function delete($id)
   {
