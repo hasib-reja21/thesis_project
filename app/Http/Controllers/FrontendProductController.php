@@ -11,7 +11,7 @@ class FrontendProductController extends Controller
 {
     public function  singleProductView($productId)
     {
-        $biddings=Bidding::all();
+        $biddings=Bidding::orderBy('price', 'DESC')->get();
         $products = Product::all();
         $singleProduct=Product::find($productId);
         // dd($singleProduct->name);
@@ -41,6 +41,11 @@ class FrontendProductController extends Controller
         return redirect()->back();
 
 
+     }
+
+     public function productUnderCategory($category_id){
+        $products=Product::where('category_id',$category_id)->get();
+        return view('admin.Frontend.Pages.product-under-category',compact('products'));
      }
     
 }

@@ -23,7 +23,7 @@ Route::post('/registration',[CustomerController::class, 'store'])->name('custome
 Route::get("/login",[CustomerController::class,'login'])->name('customer.login');
 Route::post("/login",[CustomerController::class,'doLogin'])->name('customer.do.login');
 
-
+Route::get('productUnderCategory/{cat_id}',[FrontendProductController::class,'productUnderCategory'])->name('product.under.category.view');
 
 Route::group(['middleware'=>'auth'],function(){
     Route::get('/logout',[CustomerController::class, 'logout'])->name('customer.logout');
@@ -31,6 +31,9 @@ Route::group(['middleware'=>'auth'],function(){
     Route::post('/bid-store/{id}',[FrontendProductController::class,'store'])->name('bid.store');
     
     Route::get('/profile',[CustomerController::class,'profile' ])->name('profile.view');
+    Route::get('/profileedit/{id}',[CustomerController::class,'edit' ])->name('profile.edit');
+    Route::post('/profileupdate/{id}',[CustomerController::class,'update' ])->name('profile.update');
+    // Route::post('/demo/{id}',[CustomerController::class,'demo' ])->name('demo');
 
    
     Route::get('/timer', [TimerController::class, 'getTimer'])->name('timer.get');

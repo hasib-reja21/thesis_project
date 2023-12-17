@@ -27,11 +27,6 @@
                     <div class="col-sm-5 mt-sm-3 mt-2">
                         <ul class="header__info-list d-flex flex-wrap align-items-center justify-content-sm-end justify-content-center">
 
-                            <!-- <li class="cart-view  d-none " data-bs-toggle="tooltip" title="Product Cart">
-                                <a href="#" class="header-cart-btn">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                                    <span class="cart-count">0</span>
-                                </a> -->
                             </li>
                             @guest
                             <li><a href="{{route('customer.login')}}"><i class="fa fa-sign-out text-white" aria-hidden=" true"></i>Login </a></li>
@@ -48,10 +43,9 @@
                 </div>
                     <div class="container-xl">
                         <nav class="navbar navbar-expand-lg p-0 align-items-center">
-                            <a class="site-logo site-title mt-2 ml-5" href="#">
-                                <!-- <img class="" style="border-radius: 10px; height:70px; width:70px;" src="#" alt="">  -->
-                                <!-- https://i.ibb.co/KrPmbhr/abs-2.jpg -->
-
+                            <a class="site-logo site-title  ml-5" href="#">
+                                <img class="" style="border-radius: 20px; height:70px; width:70px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt=""> 
+                               
                             </a>
                             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="menu-toggle"></span>
@@ -59,7 +53,7 @@
                             <div class="collapse navbar-collapse mt-lg-0 mt-3" id="navbarSupportedContent">
                                 <button type="button" class="menu-sidebar-close"><i class="las la-times"></i></button>
                                 <ul class="navbar-nav main-menu m-auto">
-                                    <li><a href="#">Home</a></li>
+                                    <li><a href="{{route('frontend.home')}}">Home</a></li>
                                     <li class="">
                                         <a href="#0">About</a>
                                         <ul class="sub-menu">
@@ -76,6 +70,18 @@
                                             <li><a href="{{route('product.list')}}">View product</a></li>
                                         </ul>
                                     </li>
+
+                                    <li class="">
+                                        <a href="#0">Category</a>
+                                        <ul class="sub-menu">
+                                       @foreach ($headerCategories as $data )
+                                       <li><a href="{{route('product.under.category.view',$data->id)}}">{{$data->name}}</a></li>
+                                       @endforeach
+                                           
+                                            
+                                        </ul>
+                                    </li>
+                                    
 
                                     <li class="has-mega-menu">
                                         <a href="#0">Products</a>

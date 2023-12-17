@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-3 border-right">
             <div class=" profile-img d-flex flex-column align-items-center text-center p-3 py-5">
-                <img class="rounded-circle mt-5" width="150px" src="{{url('/uploads//'.auth()->user()->image)}}">
+                <img class="rounded-circle mt-5" width="100px" src="{{url('/uploads//'.auth()->user()->image)}}">
                 <span class="font-weight-bold ">{{ auth()->user()->name }}</span><span class="text-black-50">
                     {{ auth()->user()->email }}
                 </span><span> </span>
@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3 mt-3">
+                <div class="d-flex justify-content-between align-items-center mb-3 mt-5">
                     <h4 class="text-right">Profile Settings</h4>
                 </div>
                 <div class="row mt-2">
@@ -37,7 +37,7 @@
                 <div class="col-md-6"><label class="labels">Mobile Number</label><input type="mobile" class="form-control" placeholder="Mobile Number" value="01825132226"></div>
                     <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value="Bangladesh"></div>
                 </div>
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                 <div class="mt-5 text-center"><button class="btn btn-primary profile-button"><a href="{{route('profile.edit',auth()->user()->id)}}">Update profile</a></button></div>
             </div>
         </div>
         <div class="">
@@ -72,6 +72,12 @@
 </div>
 </div>
 </div>
+
+
+
+
+
+
 @endsection
 
 <!------ Include the above in your HEAD tag ---------->

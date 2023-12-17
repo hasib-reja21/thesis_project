@@ -33,7 +33,7 @@
                 <h5>Remaining Time: <span style="color:red" id="timer"></span></h5>
               </div>
 
-              <div class="d-flex gap-5 justify-content-center align-items-center">
+              <div class="d-flex gap-5 ">
 
                 <form action="{{route('bid.store', $singleProduct->id)}}" method="post" class="d-flex gap-3">
                   @csrf
@@ -63,6 +63,7 @@
             <th>User Name</th>
             <th>Price</th>
             <th>ProductID</th>
+            <th>Bidding Time</th>
             <th>status</th>
           </tr>
         </thead>
@@ -75,6 +76,10 @@
             <td>{{$bid->user_name}}</td>
             <td>{{$bid->price}}</td>
             <td>{{$bid->product_id}}</td>
+            <!-- <td>{{  date('d-m-Y', strtotime($bid->created_at))}}</td> -->
+            <td>{{$bid->created_at->format('d-m-Y | H:i:s')}} </td>
+            
+          
             <td>{{$bid->status}}</td>
           </tr>
           @endforeach
@@ -82,6 +87,7 @@
 
         </tbody>
       </table>
+    
     </div>
   </section>
 
@@ -117,7 +123,7 @@
 
   <script>
     $(document).ready(function() {
-      var countdownTime = 20; // 3 minutes * 60 seconds
+      var countdownTime = 120; // 3 minutes * 60 seconds
 
       function updateTimer() {
         var minutes = Math.floor(countdownTime / 60);
@@ -133,8 +139,7 @@
           $('#generateValue').prop('disabled', true); // Disable the button when timer expires
           // $('#generateValue').remove(); //remove the button when timer expires
           $('#bidAmount').prop('disabled', true);
-          $('#timerSection').text('Bid time expired!').css('color', 'red'); // Update the timer display or message
-          // Additional logic when the bid time expires can be added here
+          $('#timerSection').text('Bid time expired!').css('color', 'red'); 
         }
 
         countdownTime--;

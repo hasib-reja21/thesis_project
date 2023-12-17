@@ -194,16 +194,7 @@
             </a>
           </li> -->
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fa-solid fa-gear"></i>
-              <p>
-                Settings
-                
-                <span class="badge badge-info right"></span>
-              </p>
-            </a>
-          </li>
+       
           <li class="nav-item">
             <a href="" class="nav-link">
               <i class="fa-solid fa-chart-simple"></i>

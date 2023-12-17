@@ -9,8 +9,8 @@ class HomeController extends Controller
 {
     public function home(){
         $product = Product::count();
-        $products=Product::all();
-        return view('admin.Frontend.Partials.home-dashboard',compact('products','products'));
+      
+        return view('admin.Frontend.Partials.home-dashboard',compact('product'));
     }
 
     public function search(Request $request){

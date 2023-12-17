@@ -88,8 +88,39 @@ class CustomerController extends Controller
         notify()->success('Logout successfull');
         return redirect()->route('frontend.home');
     }
+    
     public function profile(){
         $products=Product::all();
         return view('admin.Frontend.Pages.profile-view',compact('products'));
+
     }
+    public function edit($id){
+        $profile_edit=User::find($id);
+        return view('admin.Frontend.Pages.profile-edit',compact('profile_edit'));
+    }
+    public function update(Request $request ,$id){
+        // dd($request->all());
+        $profile_edit=User::find($id);
+        if($profile_edit){
+            $fileName = $profile_edit->image;
+            if ($request->hasFile('image')) {
+      
+              $file = $request->file('image');
+              $fileName = date('Ymdhis') . '.' . $file->getClientOriginalExtension();
+              $file->storeAs('/uploads', $fileName);
+            }
+            $profile_edit->update([
+                'name'=>$request->name,
+                'email'=>$request->email,
+                'image'=>$fileName
+               ]);
+        }
+       
+        notify()->success('Profile update successfull');
+        return redirect()->route('frontend.home');
+        
+    }
+
+
+ 
 }

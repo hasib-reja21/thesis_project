@@ -131,7 +131,7 @@
                     <div class="service_item style_1 shadow" style="text-align: left">
                         <div class="auction-thumb">
                             <a href=""><img style="width: 100%;" src="{{url('/uploads//'.$product->Product_Image)}}" alt="product_image"></a>
-                            <a href="#0" class="rating"><i class="fa-regular fa-star" style="color:yellow;"></i></a>
+                            
 
                         </div>
                         <div>
@@ -150,15 +150,7 @@
                                         <!-- <div class="amount"></div> -->
                                     </div>
                                 </div>
-                                <!-- <div class="d-flex">
-                                <div class="icon">
-                                    <i class="flaticon-money"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Buy Now</div>
-                                    <div class="amount">$5,00.00</div>
-                                </div>
-                            </div> -->
+                                
 
                             </div>
 
@@ -559,7 +551,7 @@ $(document).ready(function() {
   function updateTimer() {
     $('#countdown').html('Time Left: ' + formatTime(countdownTime));
     countdownTime--;
-     if (countdownTime < 0) {
+    if (countdownTime < 0) {
       clearInterval(timerInterval);
 
       // Disable the 'Bid Now' button after the countdown expires

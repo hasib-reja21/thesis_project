@@ -76,7 +76,6 @@ class UserController extends Controller
     
             }
     
-           
             User::create([
                 'name'=>$request->user_name,
                 'role'=>$request->role,

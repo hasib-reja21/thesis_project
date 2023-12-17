@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('user_name');
             $table->double('price');
             $table->integer('product_id');
+            // $table->time('bidding_time')->nullable();
+            // $table->time('is_expired')->nullable();
             $table->string('status')->default('pending');
             $table->timestamps();
         });
@@ -31,5 +33,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('biddings');
+        
     }
 };

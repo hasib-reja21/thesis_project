@@ -9,6 +9,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Users</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    img{
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      border: 1px solid black;
+      
+    }
+   </style>
 </head>
 
 <body>
@@ -74,7 +83,7 @@
           <td>{{$user->name}}</td>
           <td>{{$user->role}}</td>
           <td>
-          <img  src="{{url('/uploads//'.$user->image)}}" alt="">
+          <img src="{{url('/uploads//'.$user->image)}}" alt="">
           </td>
           <td>{{$user->email}}</td>
           <td>

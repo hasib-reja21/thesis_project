@@ -5,7 +5,7 @@
                 <div class="row gy-4">
                     <div class="col-lg-4 col-sm-8 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.1s">
                         <div class="footer-widget">
-                            <a href="#0" class="footer-logo"><img src="" alt="image"></a>
+                            <a href="#0" class="footer-logo"><img style="width: 250px; height:150px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt="image"></a>
                             <p class="mt-4">Founded in 2011. Architecting secure, efficient, and user-friendly items by writing standard and well-documented codes to turn ideas into reality. Working on a daily basis to bring unique, standard, and trendy products for various marketplace and clients.</p>
                         </div>
                     </div>
