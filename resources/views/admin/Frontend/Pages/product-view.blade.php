@@ -7,6 +7,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+  <script type="module" src=" https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script type="module" src=" https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+ 
+    
   <style>
     .mb-4 {
       margin-top: 110px;
@@ -23,6 +29,8 @@
           <div class="card mt-5">
             <img src="{{url('/uploads/'.$singleProduct->Product_Image)}}" style="height: 250px; padding:5px;" alt="" class="">
             <div class="card-body">
+              <h5 class="" id="id">{{  $singleProduct->id }}</h5>
+              <h5 class="" id="status">@if(isset($bidstatus))  $bidstatus @else 0 @endif</h5>
               <h5 class="card-title">Product Name: {{ $singleProduct->Product_Name}}</h5>
               <h5 class="card-title">Product Price: {{$singleProduct->Product_Price}}</h5>
               <!-- <p class="card-text">{{ $singleProduct->Product_Description}}</p> -->
@@ -44,7 +52,7 @@
 
                   <div class="col-3">
 
-                    <button class="btn btn-outline-success btn-sm p-2 mt-2" type="submit" id="generateValue">Bid Now</button>
+                    <button class="btn btn-outline-success btn-sm p-2 mt-2" type="submit" id="bidNow">Bid Now</button>
                   </div>
                 </form>
               </div>
@@ -56,7 +64,7 @@
 
     <div class="container">
       <h1 class="mb-3 mt-5"><strong>Bidding Information</strong></h1>
-      <table class="table mr-5 border ">
+      <table class="table mr-5 border " id="#myTable">
         <thead>
           <tr>
             <th>ID</th>
@@ -87,7 +95,7 @@
 
         </tbody>
       </table>
-    
+     
     </div>
   </section>
 
@@ -96,62 +104,53 @@
   <!-- Include jQuery library -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- JavaScript for updating the timer -->
-  <!-- <script>
-    $(document).ready(function() {
-        function updateTimer() {
-            $.ajax({
-                url: '{{ route("timer.get") }}',
-                method: 'GET',
-                success: function(response) {
-                    $('#timerDisplay').text('Time Left: ' + response.timer);
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error fetching timer:', error);
-                }
-            });
-        }
 
-        // Update timer initially
-        updateTimer();
+<script>
+     
 
-        // Fetch timer value every second
-        setInterval(updateTimer, 1000);
-    });
-</script> -->
+    // Set the date we're counting down to
+    var countDownDate = new Date("Dec 21, 2023 19:32:00").getTime();
 
+    // Update the count down every 1 second
+    var x = setInterval(function() {
 
-  <script>
-    $(document).ready(function() {
-      var countdownTime = 120; // 3 minutes * 60 seconds
-
-      function updateTimer() {
-        var minutes = Math.floor(countdownTime / 60);
-        var seconds = countdownTime % 60;
-
-        var timerDisplay = (minutes < 10 ? '0' + minutes : minutes) + 'm:' +
-          (seconds < 10 ? '0' + seconds : seconds) + 's';
-
-        $('#timer').text(timerDisplay);
-
-        if (countdownTime === 0) {
-          clearInterval(timerInterval);
-          $('#generateValue').prop('disabled', true); // Disable the button when timer expires
-          // $('#generateValue').remove(); //remove the button when timer expires
-          $('#bidAmount').prop('disabled', true);
-          $('#timerSection').text('Bid time expired!').css('color', 'red'); 
-        }
-
-        countdownTime--;
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+    
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("timer").innerHTML =  minutes + "m " + seconds + "s ";
+     
+      // If the count down is over, write some text 
+      if (distance < 1) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "BID TIME EXPIRED";
+        document.getElementById("bidAmount").disabled = true;
+        document.getElementById("bidNow").disabled = true;
+        var productId = document.getElementById("id").innerHTML;
+        var status = document.getElementById("status").innerHTML;
+       if(status != 1 && distance>-1){
+        window.location.replace('/product_status_update' + '/' +  productId);
       }
-
-      updateTimer();
-      var timerInterval = setInterval(updateTimer, 1000);
-    });
-  </script>
+      }
+    }, 1000);
 
 
+</script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js">
+  let table = new DataTable('#myTable');
+</script>
+
+    
 </body>
 
 </html>
 @endsection
+

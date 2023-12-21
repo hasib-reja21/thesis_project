@@ -11,7 +11,7 @@
                     <div class="section-header text-center">
                         <h2 class="section-title ">Bid On These Featured Auctions!</h2>
                     </div>
-                    <h2 class="mb-3" style="text-align:left;"><strong>Search result for</strong> : {{ request()->search }} found {{$products->count()}} products.</h2>
+                    <h1 class="mb-3 " style="text-align:left;"><strong>Search result for</strong> : {{ request()->search }} found {{$products->count()}} products.</h1>
                 </div>
             </div>
            

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bidding;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
@@ -9,8 +10,8 @@ class HomeController extends Controller
 {
     public function home(){
         $product = Product::count();
-      
-        return view('admin.Frontend.Partials.home-dashboard',compact('product'));
+        $biddings = Bidding::count();
+        return view('admin.Frontend.Partials.home-dashboard',compact('product','biddings'));
     }
 
     public function search(Request $request){

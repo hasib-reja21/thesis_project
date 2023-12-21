@@ -12,7 +12,7 @@ class DashboardController extends Controller
     public function dashboard(){
         $categories = Category::count();
         $products = Product::count();
-        $users = User::count();
+        $users = User::where('role','Customer')->count();
        
         return view('admin.Partial.dashboard',compact('categories','products','users'));
     }

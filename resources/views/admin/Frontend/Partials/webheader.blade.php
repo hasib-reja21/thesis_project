@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* .header__info-list {
-            margin: -53px -7px;
-        } */
-         /* .navbar-expand-lg .navbar-collapse {
-    
-            transform: translateY(-48px);
-  } */
+        .header__info-list {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .header__info-list li {
+            list-style: none;
+        }
+
+        .header__info-list a {
+            text-decoration: none;
+            color: #000;
+        }
     </style>
 </head>
 
@@ -21,31 +30,29 @@
         <div class="header__top ">
             <div class="container-xl ">
                 <div class="header__bottom ">
-                <div class="row ">
-                    <div class="col-sm-7">
-                    </div>
-                    <div class="col-sm-5 mt-sm-3 mt-2">
-                        <ul class="header__info-list d-flex flex-wrap align-items-center justify-content-sm-end justify-content-center">
+            <div class="container">
+                <div class="row align-items-center flex-column-reverse flex-lg-row">
+                   
+                       
+                        <div class="col-sm-5 col-md-6 mt-sm-3 mt-2">
+                            <ul class="header__info-list">
+                                @guest
+                                <li><a href="{{route('customer.login')}}"><i class="fa fa-sign-out text-white" aria-hidden=" true"></i>Login </a></li>
+                                <li><a href="{{route('customer.registration')}}"><i class="fa-solid fa-user text-white"></i>Register</a></li>
+                                @endguest
 
-                            </li>
-                            @guest
-                            <li><a href="{{route('customer.login')}}"><i class="fa fa-sign-out text-white" aria-hidden=" true"></i>Login </a></li>
-                            <li><a href="{{route('customer.registration')}}"><i class="fa-solid fa-user text-white  "></i>Register</a></li>
-                            @endguest
-
-                            @auth
-                           
-                            <li><a href="{{route('customer.logout')}}"><i class="fa fa-sign-out text-white" aria-hidden="true"></i>Sign out | </a></li>
-                            <a href="{{route('profile.view')}}">{{auth()->user()->name}}</a>
-                            @endauth
-                        </ul>
-                    </div>
-                </div>
-                    <div class="container-xl">
+                                @auth
+                                <li><a href="{{route('customer.logout')}}"><i class="fa fa-sign-out text-white" aria-hidden="true"></i>Sign out | </a></li>
+                                <li><a href="{{route('profile.view')}}">{{auth()->user()->name}}</a></li>
+                                @endauth
+                            </ul>
+                        </div>
+                   
+                    <div class="container-xl col-md-6">
                         <nav class="navbar navbar-expand-lg p-0 align-items-center">
                             <a class="site-logo site-title  ml-5" href="#">
-                                <img class="" style="border-radius: 20px; height:70px; width:70px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt=""> 
-                               
+                                <img class="" style="border-radius: 20px; height:70px; width:70px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt="">
+
                             </a>
                             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="menu-toggle"></span>
@@ -74,14 +81,14 @@
                                     <li class="">
                                         <a href="#0">Category</a>
                                         <ul class="sub-menu">
-                                       @foreach ($headerCategories as $data )
-                                       <li><a href="{{route('product.under.category.view',$data->id)}}">{{$data->name}}</a></li>
-                                       @endforeach
-                                           
-                                            
+                                            @foreach ($headerCategories as $data )
+                                            <li><a href="{{route('product.under.category.view',$data->id)}}">{{$data->name}}</a></li>
+                                            @endforeach
+
+
                                         </ul>
                                     </li>
-                                    
+
 
                                     <li class="has-mega-menu">
                                         <a href="#0">Products</a>
@@ -112,8 +119,12 @@
                             </div>
                         </nav>
                     </div>
+                    </div>
+                   
                 </div>
-               
+                    </div>
+                
+
             </div>
         </div>
 
@@ -121,22 +132,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

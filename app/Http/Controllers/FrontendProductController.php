@@ -11,32 +11,37 @@ class FrontendProductController extends Controller
 {
     public function  singleProductView($productId)
     {
-        $biddings=Bidding::orderBy('price', 'DESC')->get();
+        $biddings=Bidding::where('product_id',$productId)->orderBy('price', 'DESC')->get();
         $products = Product::all();
         $singleProduct=Product::find($productId);
-        // dd($singleProduct->name);
+        
         return view('admin.Frontend.Pages.product-view',compact('singleProduct','products','biddings'));
 
     }  
      public function store( Request $request, $id){
-        // dd($request->all());
+      
+
+        $maxPrice = Bidding::max('price');
         $validate=Validator::make($request->all(),[
-            'amount'=>'required',
-            
+            'amount' => 'required|numeric|gt:' . $maxPrice,
+        ],
+        [
+            'amount.gt' => "The amount must be greater than {$maxPrice}.",
         ]);
+
         if($validate->fails())
         {
-         
+            notify()->error('The amount must be greater than max price!');
             return redirect()->back()->withErrors($validate);
         }
+        
         Bidding::create([
             'user_name'=>auth()->user()->name,
-            'price'=>$request->amount,
+            'price'=>   $request->amount,
             'product_id' => $id,
             'status' => 'pending',
-
-            
         ]);
+
         notify()->success('Bid submitted successfull');
         return redirect()->back();
 
@@ -47,5 +52,19 @@ class FrontendProductController extends Controller
         $products=Product::where('category_id',$category_id)->get();
         return view('admin.Frontend.Pages.product-under-category',compact('products'));
      }
-    
+
+     public function View(){
+        $ViewAllProducts=Product::all();
+        return view('admin.Frontend.Pages.product-all-view',compact('ViewAllProducts'));
+     }
+     // status will change the winner customer
+     public function StatusUpdate($id){
+        // dd($id);
+        //Find the max price from the bidding table
+        // $maxAmount =Bidding::max('price');
+        // dd($maxAmount); 
+        $maxBidderId = Bidding::where('price', Bidding::max('price'))->value('id');
+        $changeStatus = Bidding::where('id',$maxBidderId)->update(['status'=>'win']);
+        return redirect()->route('single.product', ['id'=>$id, 'bidstatus'=>1]);
+    }
 }

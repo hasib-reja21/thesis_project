@@ -63,10 +63,12 @@
             background: blue;
 
         }
-        .hero__title{
+
+        .hero__title {
             transform: translateY(-95px);
         }
-        .hero__subtitle{
+
+        .hero__subtitle {
             transform: translateY(-73px);
         }
     </style>
@@ -124,14 +126,14 @@
             </div>
 
             <div class="row justify-content-center gy-4 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.7s">
-                @foreach ($products as $product )
-                <!-- ancore tag -->
+                @foreach ($products->take(3) as $product )
+
 
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                     <div class="service_item style_1 shadow" style="text-align: left">
                         <div class="auction-thumb">
                             <a href=""><img style="width: 100%;" src="{{url('/uploads//'.$product->Product_Image)}}" alt="product_image"></a>
-                            
+
 
                         </div>
                         <div>
@@ -150,7 +152,7 @@
                                         <!-- <div class="amount"></div> -->
                                     </div>
                                 </div>
-                                
+
 
                             </div>
 
@@ -162,7 +164,7 @@
                                     <!-- for countdown the time -->
                                     <!-- <p id="countdown">Time Left:</p> -->
                                 </div>
-                                <span class="total-bids"><span style="color: orange;">|</span> 30 Bids</span>
+                                <span class="total-bids"><span style="color: orange;">|</span>bidding--{{ $biddings}}</span>
                             </div>
 
                             <div class="text-center" style="text-align: left !important;">
@@ -171,7 +173,64 @@
                         </div>
                     </div>
                 </div>
-                <!-- ancore tag close -->
+
+
+                @endforeach
+                <button><a href="{{route('product.all.view')}}"><span class="fw-700">View All</span></a></button>
+            </div>
+
+
+            <div style="display: none;" class="row justify-content-center gy-4 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.7s">
+                @foreach ($products->slice(3) as $product )
+
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <div class="service_item style_1 shadow" style="text-align: left">
+                        <div class="auction-thumb">
+                            <a href=""><img style="width: 100%;" src="{{url('/uploads//'.$product->Product_Image)}}" alt="product_image"></a>
+
+
+                        </div>
+                        <div>
+                            <h5 class="title mt-2 text-left">
+                                <a href="#0">{{$product->Product_Name}}</a>
+
+                            </h5>
+                            <hr class="mt-2">
+                            <div class="d-flex gap-5 ">
+                                <div class="d-flex">
+                                    <div class="icon">
+                                        <i class="flaticon-auction"></i>
+                                    </div>
+                                    <div class="amount-content mt-3">
+                                        <div class="current">Starting Bid:{{ $product->Product_Price }} .BDT</div>
+                                        <!-- <div class="amount"></div> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <div class="countdown">
+                                    <div class="countdown">
+                                        <div id="bid_counter26">Initial time: {{ $product->created_at }} </div>
+                                    </div>
+                                    
+                                </div>
+                                <span class="total-bids"><span style="color: orange;">|</span> 30 Bids</span>
+                            </div>
+                            <div id="timerSection">
+                                        <h5>Remaining Time: <span style="color:red" id="timer"></span></h5>
+                                    </div>
+
+                            <div class="text-center" style="text-align: left !important;">
+                                <button class="btn btn-success text-white mt-5 "><a href="{{route('single.product',$product->id)}}">Bid Details</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 @endforeach
             </div>
 
@@ -256,10 +315,10 @@
                                     <div class="d-flex flex-wrap justify-content-between tesi-top align-items-center mb-4">
                                         <div class="admin_item">
                                             <div class="admin_thumbnail">
-                                                <img src="https://thesoftking.com/assets/images/testimonial/avatar_1.png" alt="Admin Avatar">
+                                                <img src="{{url('/uploads//'.auth()->user()->image)}}" alt="Admin Avatar">
                                             </div>
                                             <div class="admin_info">
-                                                <h3 class="admin_name">Staricson</h3>
+                                                <h3 class="admin_name">{{auth()->user()->name}}</h3>
                                                 <span class="admin_designation">Director</span>
                                             </div>
                                         </div>
@@ -273,7 +332,7 @@
                                     </div>
                                     <p class="testimonial_des">“I just want to thank the support staff because they have been wonderful! I have never been left alone and despite my repeated requests, they have assured.Thank you”</p>
                                     <span class="quote_icon">
-                                        <img src="https://thesoftking.com/assets/images/testimonial/icon_quote_dark.png">
+                                        <img src="">
                                     </span>
                                 </div>
                             </div>
@@ -302,7 +361,7 @@
                                     </div>
                                     <p class="testimonial_des">“Good template to start with. I had one minor issue with implementation but was resolved with fast reply from Thesoftking. Will use Thesoftking for some aditional costumisation in the future - since it will be done the fastest with their help.”</p>
                                     <span class="quote_icon">
-                                        <img src="https://thesoftking.com/assets/images/testimonial/icon_quote_dark.png">
+                                        <!-- <img src="https://thesoftking.com/assets/images/testimonial/icon_quote_dark.png"> -->
                                     </span>
                                 </div>
                             </div>
@@ -511,67 +570,37 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Dec 21, 2023 14:57:00").getTime();
 
-<script>
-$(document).ready(function() {
-  var countdownTime;
+        // Update the count down every 1 second
+        var x = setInterval(function() {
 
-  // Retrieve countdown time from localStorage if available
-  var storedCountdown = localStorage.getItem('countdownTime');
-  if (storedCountdown) {
-    countdownTime = parseInt(storedCountdown);
-    startCountdown(); // Start the countdown from the stored time
-  } else {
-    // Set the initial countdown time in seconds
-    countdownTime = 120; // Change this value to your desired countdown time in seconds
-    startCountdown(); // Start the countdown
-  }
+            // Get today's date and time
+            var now = new Date().getTime();
 
-  // Function to start the countdown timer
-  function startCountdown() {
-    // Update the countdown timer initially
-    updateTimer();
-    // Start the countdown timer interval
-    var timerInterval = setInterval(updateTimer, 1000);
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
 
-    // Store countdown time in localStorage before leaving the page or refreshing
-    window.onbeforeunload = function() {
-      localStorage.setItem('countdownTime', countdownTime);
-    };
+            // Time calculations for days, hours, minutes and seconds
 
-    // Event listener for the button click event
-    $('#generateValue').click(function() {
-      var enteredValue = $('#bidAmount').val();
-      alert('Bid submitted with amount: ' + enteredValue);
-      // Add logic here to handle the bid submission
-    });
-  }
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Function to update the countdown timer
-  function updateTimer() {
-    $('#countdown').html('Time Left: ' + formatTime(countdownTime));
-    countdownTime--;
-    if (countdownTime < 0) {
-      clearInterval(timerInterval);
+            // Output the result in an element with id="demo"
+            document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
 
-      // Disable the 'Bid Now' button after the countdown expires
-      $('#generateValue').prop('disabled', true);
-      $('#countdown').html('Bid time expired!');
-      // Additional logic when the bid time expires can be added here
-    }
-  }
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "BID TIME EXPIRED";
+                document.getElementById("bidAmount").disabled = true;
+                document.getElementById("bidNow").disabled = true;
+            }
+        }, 1000);
+    </script>
 
-  // Function to format time as minutes:seconds
-  function formatTime(seconds) {
-    var minutes = Math.floor(seconds / 60);
-    var remainingSeconds = seconds % 60;
-
-    return (minutes < 10 ? '0' + minutes : minutes) + 'm: ' +
-      (remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds) + 's';
-  }
-
-});
-</script>
 </body>
 
 

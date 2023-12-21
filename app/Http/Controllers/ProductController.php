@@ -66,7 +66,7 @@ class ProductController extends Controller
     ]);
     //  dd($data);
     notify()->success('Product created Successfull!');
-    return redirect()->route('product.list');
+    return redirect()->back();
   }
 
   //update the product

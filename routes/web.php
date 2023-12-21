@@ -17,6 +17,7 @@ use App\Http\Controllers\TimerController;
 Route::get("/www.auction.bid.com",[HomeController::class,'home'])->name('frontend.home');
 Route::get('/search-product',[HomeController::class,'search'])->name('product.search');
 
+
 Route::get('/registration',[CustomerController::class,'registration'])->name('customer.registration');
 Route::post('/registration',[CustomerController::class, 'store'])->name('customer.store');
 
@@ -24,6 +25,8 @@ Route::get("/login",[CustomerController::class,'login'])->name('customer.login')
 Route::post("/login",[CustomerController::class,'doLogin'])->name('customer.do.login');
 
 Route::get('productUnderCategory/{cat_id}',[FrontendProductController::class,'productUnderCategory'])->name('product.under.category.view');
+Route::get('/product_viewAll',[FrontendProductController::class, 'View'])->name('product.all.view');
+Route::get('/product_status_update/{id}',[FrontendProductController::class, 'StatusUpdate'])->name('product.update.status');
 
 Route::group(['middleware'=>'auth'],function(){
     Route::get('/logout',[CustomerController::class, 'logout'])->name('customer.logout');
@@ -33,10 +36,10 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/profile',[CustomerController::class,'profile' ])->name('profile.view');
     Route::get('/profileedit/{id}',[CustomerController::class,'edit' ])->name('profile.edit');
     Route::post('/profileupdate/{id}',[CustomerController::class,'update' ])->name('profile.update');
-    // Route::post('/demo/{id}',[CustomerController::class,'demo' ])->name('demo');
+    
 
    
-    Route::get('/timer', [TimerController::class, 'getTimer'])->name('timer.get');
+   
 });
 
 
