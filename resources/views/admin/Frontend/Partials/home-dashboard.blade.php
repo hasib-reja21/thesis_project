@@ -66,6 +66,14 @@
 
         .hero__title {
             transform: translateY(-95px);
+            font-size: 5rem;
+            font-weight: 700;
+            -webkit-text-stroke: 1px #fff;
+            color: transparent;
+            background-image: linear-gradient(#fff, #fff);
+            background-repeat: no-repeat;
+            background-position: -1050px 0;
+            animation: backcolor 5s linear infinite alternate;
         }
 
         .hero__subtitle {
@@ -216,13 +224,13 @@
                                     <div class="countdown">
                                         <div id="bid_counter26">Initial time: {{ $product->created_at }} </div>
                                     </div>
-                                    
+
                                 </div>
                                 <span class="total-bids"><span style="color: orange;">|</span> 30 Bids</span>
                             </div>
                             <div id="timerSection">
-                                        <h5>Remaining Time: <span style="color:red" id="timer"></span></h5>
-                                    </div>
+                                <h5>Remaining Time: <span style="color:red" id="timer"></span></h5>
+                            </div>
 
                             <div class="text-center" style="text-align: left !important;">
                                 <button class="btn btn-success text-white mt-5 "><a href="{{route('single.product',$product->id)}}">Bid Details</a></button>
@@ -572,7 +580,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("Dec 21, 2023 14:57:00").getTime();
+        var countDownDate = new Date("Dec 21, 2023 22:17:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function() {
@@ -597,8 +605,17 @@
                 document.getElementById("timer").innerHTML = "BID TIME EXPIRED";
                 document.getElementById("bidAmount").disabled = true;
                 document.getElementById("bidNow").disabled = true;
+                var productId = document.getElementById("id").innerHTML;
+
+
+                window.location.replace('/product_status_update' + '/' + productId);
+
+
             }
         }, 1000);
+    </script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js">
+        let table = new DataTable('#myTable');
     </script>
 
 </body>

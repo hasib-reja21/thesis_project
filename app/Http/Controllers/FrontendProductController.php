@@ -47,7 +47,7 @@ class FrontendProductController extends Controller
 
 
      }
-
+     //category wise prosuct show
      public function productUnderCategory($category_id){
         $products=Product::where('category_id',$category_id)->get();
         return view('admin.Frontend.Pages.product-under-category',compact('products'));
@@ -59,12 +59,16 @@ class FrontendProductController extends Controller
      }
      // status will change the winner customer
      public function StatusUpdate($id){
-        // dd($id);
-        //Find the max price from the bidding table
-        // $maxAmount =Bidding::max('price');
-        // dd($maxAmount); 
+       
+        
+        // Find the ID of the bidder with the maximum price
         $maxBidderId = Bidding::where('price', Bidding::max('price'))->value('id');
+
+        //Update the status of the maximum bidder to 'win'
         $changeStatus = Bidding::where('id',$maxBidderId)->update(['status'=>'win']);
-        return redirect()->route('single.product', ['id'=>$id, 'bidstatus'=>1]);
+        // return redirect()->route('single.product', ['id'=>$id]);
+        // return redirect()->route('single.product', $id);
+        return redirect()->back();
+        
     }
 }

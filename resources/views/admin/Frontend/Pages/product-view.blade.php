@@ -30,11 +30,10 @@
             <img src="{{url('/uploads/'.$singleProduct->Product_Image)}}" style="height: 250px; padding:5px;" alt="" class="">
             <div class="card-body">
               <h5 class="" id="id">{{  $singleProduct->id }}</h5>
-              <h5 class="" id="status">@if(isset($bidstatus))  $bidstatus @else 0 @endif</h5>
+              
               <h5 class="card-title">Product Name: {{ $singleProduct->Product_Name}}</h5>
               <h5 class="card-title">Product Price: {{$singleProduct->Product_Price}}</h5>
-              <!-- <p class="card-text">{{ $singleProduct->Product_Description}}</p> -->
-              <!-- <h5 class="card-title">Initial Time: {{$singleProduct->created_at}}</h5> -->
+            
 
               <!-- <div id="timerDisplay"></div> -->
               <div id="timerSection">
@@ -106,10 +105,8 @@
 
 
 <script>
-     
-
     // Set the date we're counting down to
-    var countDownDate = new Date("Dec 21, 2023 19:32:00").getTime();
+  var countDownDate = new Date("Dec 21, 2023 23:12:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -120,7 +117,7 @@
       // Find the distance between now and the count down date
       var distance = countDownDate - now;
         
-      // Time calculations for days, hours, minutes and seconds
+      // Time calculations for  minutes and seconds
     
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
@@ -129,24 +126,24 @@
       document.getElementById("timer").innerHTML =  minutes + "m " + seconds + "s ";
      
       // If the count down is over, write some text 
-      if (distance < 1) {
+      if (distance < 0) {
         clearInterval(x);
         document.getElementById("timer").innerHTML = "BID TIME EXPIRED";
         document.getElementById("bidAmount").disabled = true;
         document.getElementById("bidNow").disabled = true;
         var productId = document.getElementById("id").innerHTML;
-        var status = document.getElementById("status").innerHTML;
-       if(status != 1 && distance>-1){
+        
+       
         window.location.replace('/product_status_update' + '/' +  productId);
+        
+      
       }
-      }
-    }, 1000);
+      
+  }, 1000);
 
 
 </script>
-<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js">
-  let table = new DataTable('#myTable');
-</script>
+
 
     
 </body>

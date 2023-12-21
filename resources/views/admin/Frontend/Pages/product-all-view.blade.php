@@ -8,7 +8,7 @@
             <div class="row justify-content-center">
                 <div class="col-xxl-7 col-lg-8 col-md-11">
                     <div class="section-header text-center">
-                        <h2 class="section-title ">Bid On These Featured Auctions!</h2>
+                        <h2 class="section-title " style="margin-top: 100px;">Bid On These Featured Auctions!</h2>
                     </div>
                 </div>
             </div>

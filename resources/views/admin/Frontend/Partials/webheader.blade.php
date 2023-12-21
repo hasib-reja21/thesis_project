@@ -12,6 +12,10 @@
             align-items: center;
             justify-content: flex-end;
             gap: 20px;
+            margin-top: -5px;
+                margin-right: -101px;
+                margin-bottom: -5px;
+                margin-left: -101px;
         }
 
         .header__info-list li {
@@ -21,6 +25,12 @@
         .header__info-list a {
             text-decoration: none;
             color: #000;
+        }
+        .header__top {
+            padding-top: -0.813rem;
+            padding-right: 0px;
+            padding-bottom: 0.813rem;
+            padding-left: 0px;
         }
     </style>
 </head>
@@ -34,24 +44,12 @@
                 <div class="row align-items-center flex-column-reverse flex-lg-row">
                    
                        
-                        <div class="col-sm-5 col-md-6 mt-sm-3 mt-2">
-                            <ul class="header__info-list">
-                                @guest
-                                <li><a href="{{route('customer.login')}}"><i class="fa fa-sign-out text-white" aria-hidden=" true"></i>Login </a></li>
-                                <li><a href="{{route('customer.registration')}}"><i class="fa-solid fa-user text-white"></i>Register</a></li>
-                                @endguest
-
-                                @auth
-                                <li><a href="{{route('customer.logout')}}"><i class="fa fa-sign-out text-white" aria-hidden="true"></i>Sign out | </a></li>
-                                <li><a href="{{route('profile.view')}}">{{auth()->user()->name}}</a></li>
-                                @endauth
-                            </ul>
-                        </div>
+                       
                    
                     <div class="container-xl col-md-6">
                         <nav class="navbar navbar-expand-lg p-0 align-items-center">
                             <a class="site-logo site-title  ml-5" href="#">
-                                <img class="" style="border-radius: 20px; height:70px; width:70px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt="">
+                                <!-- <img class="" style="border-radius: 20px; height:70px; width:70px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt=""> -->
 
                             </a>
                             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -119,6 +117,19 @@
                             </div>
                         </nav>
                     </div>
+                    <div class="col-sm-5 col-md-6 mt-sm-3 mt-2">
+                            <ul class="header__info-list">
+                                @guest
+                                <li><a href="{{route('customer.login')}}"><i class="fa fa-sign-out text-white" aria-hidden=" true"></i>Login </a></li>
+                                <li><a href="{{route('customer.registration')}}"><i class="fa-solid fa-user text-white"></i>Register</a></li>
+                                @endguest
+
+                                @auth
+                                <li><a href="{{route('customer.logout')}}"><i class="fa fa-sign-out text-white" aria-hidden="true"></i>Sign out | </a></li>
+                                <li><a href="{{route('profile.view')}}">{{auth()->user()->name}}</a></li>
+                                @endauth
+                            </ul>
+                        </div>
                     </div>
                    
                 </div>
