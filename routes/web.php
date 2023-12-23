@@ -36,29 +36,23 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/profile',[CustomerController::class,'profile' ])->name('profile.view');
     Route::get('/profileedit/{id}',[CustomerController::class,'edit' ])->name('profile.edit');
     Route::post('/profileupdate/{id}',[CustomerController::class,'update' ])->name('profile.update');
-    
-
-   
-   
 });
 
-
-
-
-
 // admin controllers
-
-
  Route::get('/admin/login',[UserController::class,'loginForm'])->name('admin.login');
  Route::post('/login-form-post',[UserController::class,'loginPost'])->name('admin.login.post');
 
  Route::group(['middleware'=>'auth'],function(){
     Route::group(['middleware' => 'CheckAdmin'], function () {
-
+    
+     //user controller
     Route::get('/admin/logout',[UserController::class, 'logout'])->name('admin.logout');
     Route::get('/user/list',[UserController::class, 'list'])->name('user.list');
     Route::post('/user/store',[UserController::class, 'store'])->name('user.store');
+
     Route::get("/",[DashboardController::class,'dashboard'])->name('dashboard');
+    Route::get("/bidder-list",[DashboardController::class,'BidderInfo'])->name('bidder.list');
+
 
     // category controllers
     Route::get("/category/view-category",[CategoryController::class,'View'])->name('category.list');
@@ -67,18 +61,15 @@ Route::group(['middleware'=>'auth'],function(){
     // contact controllers
     Route::get("/communication/form",[ContactController::class,'createForm'])->name('contact.form');
     Route::post("/communication/store",[ContactController::class,'Store'])->name('communication.store');
+
     // Product controllers
     Route::get("/product/form",[ProductController::class,'Form'])->name('product.create');
     Route::get("/product/list",[ProductController::class,'List'])->name('product.list');
-
     Route::get('product/delete/{id}',[ProductController::class, 'delete'])->name('product.delete');
     Route::get('product/edit/{id}',[ProductController::class, 'edit'])->name('product.edit');
     Route::put('product/update/{id}',[ProductController::class, 'update'])->name('product.update');
     Route::get('product/view/{id}',[ProductController::class, 'view'])->name('product.view');
-    Route::post("/product/store",[ProductController::class,'store'])->name('product.store');
-
-    //user controllers
-    
+    Route::post("/product/store",[ProductController::class,'store'])->name('product.store'); 
  });
 
  });

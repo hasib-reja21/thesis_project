@@ -128,7 +128,7 @@
             </ul>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('bidder.list')}}" class="nav-link">
               <i class="fa-solid fa-users"></i>
               <p>
                 Manage Bidder

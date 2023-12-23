@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
   <script type="module" src=" https://code.jquery.com/jquery-3.7.0.js"></script>
   <script type="module" src=" https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
- 
-    
+
+
   <style>
     .mb-4 {
       margin-top: 110px;
@@ -29,13 +29,9 @@
           <div class="card mt-5">
             <img src="{{url('/uploads/'.$singleProduct->Product_Image)}}" style="height: 250px; padding:5px;" alt="" class="">
             <div class="card-body">
-              <h5 class="" id="id">{{  $singleProduct->id }}</h5>
-              
+              <h5 class="" id="id">ProductID: {{$singleProduct->id }}</h5>
               <h5 class="card-title">Product Name: {{ $singleProduct->Product_Name}}</h5>
               <h5 class="card-title">Product Price: {{$singleProduct->Product_Price}}</h5>
-            
-
-              <!-- <div id="timerDisplay"></div> -->
               <div id="timerSection">
                 <h5>Remaining Time: <span style="color:red" id="timer"></span></h5>
               </div>
@@ -45,12 +41,9 @@
                 <form action="{{route('bid.store', $singleProduct->id)}}" method="post" class="d-flex gap-3">
                   @csrf
                   <div>
-
                     <input type="number" name="amount" id="bidAmount" class="border p-2 rounded mt-2" placeholder="Your amount..." required>
                   </div>
-
                   <div class="col-3">
-
                     <button class="btn btn-outline-success btn-sm p-2 mt-2" type="submit" id="bidNow">Bid Now</button>
                   </div>
                 </form>
@@ -83,10 +76,7 @@
             <td>{{$bid->user_name}}</td>
             <td>{{$bid->price}}</td>
             <td>{{$bid->product_id}}</td>
-            <!-- <td>{{  date('d-m-Y', strtotime($bid->created_at))}}</td> -->
             <td>{{$bid->created_at->format('d-m-Y | H:i:s')}} </td>
-            
-          
             <td>{{$bid->status}}</td>
           </tr>
           @endforeach
@@ -94,7 +84,7 @@
 
         </tbody>
       </table>
-     
+
     </div>
   </section>
 
@@ -104,27 +94,28 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-<script>
+  <script>
     // Set the date we're counting down to
-  var countDownDate = new Date("Dec 21, 2023 23:12:00").getTime();
+    var singleProduct = @php echo json_encode($singleProduct); @endphp;
+    var countDownDate = new Date(singleProduct?.bid_expiration_date).getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
 
       // Get today's date and time
       var now = new Date().getTime();
-        
+
       // Find the distance between now and the count down date
       var distance = countDownDate - now;
-        
+
       // Time calculations for  minutes and seconds
-    
+
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
+
       // Output the result in an element with id="demo"
-      document.getElementById("timer").innerHTML =  minutes + "m " + seconds + "s ";
-     
+      document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+
       // If the count down is over, write some text 
       if (distance < 0) {
         clearInterval(x);
@@ -132,22 +123,10 @@
         document.getElementById("bidAmount").disabled = true;
         document.getElementById("bidNow").disabled = true;
         var productId = document.getElementById("id").innerHTML;
-        
-       
-        window.location.replace('/product_status_update' + '/' +  productId);
-        
-      
       }
-      
-  }, 1000);
-
-
-</script>
-
-
-    
+    }, 1000);
+  </script>
 </body>
 
 </html>
 @endsection
-

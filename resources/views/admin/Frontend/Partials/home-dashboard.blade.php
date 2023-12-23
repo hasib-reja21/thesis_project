@@ -323,10 +323,10 @@
                                     <div class="d-flex flex-wrap justify-content-between tesi-top align-items-center mb-4">
                                         <div class="admin_item">
                                             <div class="admin_thumbnail">
-                                                <img src="{{url('/uploads//'.auth()->user()->image)}}" alt="Admin Avatar">
+                                                <img src="#" alt="Admin Avatar">
                                             </div>
                                             <div class="admin_info">
-                                                <h3 class="admin_name">{{auth()->user()->name}}</h3>
+                                                <h3 class="admin_name">Hasib Reja</h3>
                                                 <span class="admin_designation">Director</span>
                                             </div>
                                         </div>
@@ -608,15 +608,13 @@
                 var productId = document.getElementById("id").innerHTML;
 
 
-                window.location.replace('/product_status_update' + '/' + productId);
+            //    window.location.replace('/product_status_update' + '/' + productId);
 
 
             }
         }, 1000);
     </script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js">
-        let table = new DataTable('#myTable');
-    </script>
+   
 
 </body>
 

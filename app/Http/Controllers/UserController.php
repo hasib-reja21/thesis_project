@@ -85,7 +85,5 @@ class UserController extends Controller
             ]);
             notify()->success('User created successfull');
             return redirect()->back();
-    
-    
         }
     }

@@ -14,6 +14,11 @@ class ProductController extends Controller
   public function List()
   {
     $products = Product::with('category')->paginate(5);
+
+
+
+
+
     return view('admin.Pages.Products.product-list', compact('products'));
   }
 
@@ -36,12 +41,9 @@ class ProductController extends Controller
   public function store(Request $request)
   {
     //form validation
-    // dd($request->all());
+   
     $validate = validator::make($request->all(), [
-      // 'product_Name'=>'required',
-      // 'category_Name'=>'required',
-      // 'Product_Image'=>'required',
-      // 'product_Price'=>'required'
+     
     ]);
     if ($validate->fails()) {
       return redirect()->back()->withErrors($validate);
@@ -58,13 +60,12 @@ class ProductController extends Controller
     //  dd($request->all());
     Product::create([
       'Product_Name' => $request->product_Name,
-      // 'brand_id' =>$request->brand_Name,
       'category_id' => $request->category_id,
       'Product_Description' => $request->product_Description,
       'Product_Price' => $request->product_Price,
+      'bid_expiration_date'=>$request->time,
       'Product_Image' => $fileName
     ]);
-    //  dd($data);
     notify()->success('Product created Successfull!');
     return redirect()->back();
   }
@@ -72,7 +73,6 @@ class ProductController extends Controller
   //update the product
   public function update(Request $request, $id)
   {
-    // dd($request->all());
     $product = Product::find($id);
     if ($product) {
       $fileName = $product->Product_Image;

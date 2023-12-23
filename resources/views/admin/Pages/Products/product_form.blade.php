@@ -58,6 +58,12 @@
                     <label for="productPrice">Product Price</label>
                     <input type="number" step="0.01" class="form-control" id="productPrice" name="product_Price" placeholder="Enter product amount" required>
                 </div>
+
+                <div class="form-group">
+                    <label for="dateTime">Expiration Date</label>
+                    <input type="datetime-local" step="0.01" class="form-control" id="productPrice" name="time" placeholder="Enter product amount" required>
+                </div>
+
                 <div class="form-group">
                     <label for="productDescription">Product Description</label>
                     <textarea class="form-control" id="productDescription" name="product_Description" rows="3" placeholder="Write about the product"></textarea>

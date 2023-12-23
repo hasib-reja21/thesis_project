@@ -5,15 +5,23 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Bidding;
-
+use Carbon\Carbon;
 
 class FrontendProductController extends Controller
 {
     public function  singleProductView($productId)
     {
         $biddings=Bidding::where('product_id',$productId)->orderBy('price', 'DESC')->get();
+        $product = Product::where('id', $productId)->first();
         $products = Product::all();
         $singleProduct=Product::find($productId);
+        $currentDateTime = Carbon::now();
+        $bid_expiration_date =Carbon::parse($product->bid_expiration_date);
+        
+        if($currentDateTime->gt($bid_expiration_date)){
+            $maxBidderId = Bidding::where('price', Bidding::max('price'))->value('id');
+            $changeStatus = Bidding::where('id',$maxBidderId)->update(['status'=>'win']);
+        }
         
         return view('admin.Frontend.Pages.product-view',compact('singleProduct','products','biddings'));
 
