@@ -32,6 +32,9 @@
             padding-bottom: 0.813rem;
             padding-left: 0px;
         }
+        img{
+            transform: translate(-127px);
+        }
     </style>
 </head>
 
@@ -50,6 +53,7 @@
                         <nav class="navbar navbar-expand-lg p-0 align-items-center">
                             <a class="site-logo site-title  ml-5" href="#">
                                 <!-- <img class="" style="border-radius: 20px; height:70px; width:70px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt=""> -->
+                                <a href="#0" class="footer-logo"><img style="width: 80px; height:80px;" class="rounded-circle" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt="image"></a>
 
                             </a>
                             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,7 +73,7 @@
                                         </ul>
                                     </li>
                                     <li class="">
-                                        <a href="#0">Manage products</a>
+                                        <a href="#0">Post</a>
                                         <ul class="sub-menu">
                                             <li><a href="{{route('product.create')}}">Add product</a></li>
                                             <li><a href="{{route('product.list')}}">View product</a></li>
@@ -112,7 +116,7 @@
                                             @endforeach
                                         </div>
                                     </li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="{{route('user.contact.form')}}">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>

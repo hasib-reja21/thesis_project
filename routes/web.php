@@ -27,6 +27,8 @@ Route::post("/login",[CustomerController::class,'doLogin'])->name('customer.do.l
 Route::get('productUnderCategory/{cat_id}',[FrontendProductController::class,'productUnderCategory'])->name('product.under.category.view');
 Route::get('/product_viewAll',[FrontendProductController::class, 'View'])->name('product.all.view');
 Route::get('/product_status_update/{id}',[FrontendProductController::class, 'StatusUpdate'])->name('product.update.status');
+Route::get('/contact-us/form',[ContactController::class,'Message'])->name('user.contact.form');
+Route::post('/contact/store',[ContactController::class,'StoreMessage'])->name('user.contact.store');
 
 Route::group(['middleware'=>'auth'],function(){
     Route::get('/logout',[CustomerController::class, 'logout'])->name('customer.logout');
@@ -46,16 +48,20 @@ Route::group(['middleware'=>'auth'],function(){
     Route::group(['middleware' => 'CheckAdmin'], function () {
     
      //user controller
+    
     Route::get('/admin/logout',[UserController::class, 'logout'])->name('admin.logout');
     Route::get('/user/list',[UserController::class, 'list'])->name('user.list');
     Route::post('/user/store',[UserController::class, 'store'])->name('user.store');
+    Route::get('/user/delete/{id}',[UserController::class, 'delete'])->name('user.delete');
 
+    Route::get('/admin/profile/view',[DashboardController::class, 'profileView'])->name('admin.profile');
     Route::get("/",[DashboardController::class,'dashboard'])->name('dashboard');
     Route::get("/bidder-list",[DashboardController::class,'BidderInfo'])->name('bidder.list');
 
 
     // category controllers
     Route::get("/category/view-category",[CategoryController::class,'View'])->name('category.list');
+    Route::get('/category/delete/{id}',[CategoryController::class, 'delete'])->name('category.delete');
     Route::get("/category/form",[CategoryController::class,'createForm'])->name('category.create');
     Route::post("/category/store",[CategoryController::class,'store'])->name('category.store');
     // contact controllers

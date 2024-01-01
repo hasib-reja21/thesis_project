@@ -1,6 +1,11 @@
 
 @extends('admin.Frontend.master')
 @section('content')
+<style>
+      img{
+            transform: translate(-3px);
+       }
+</style>
 <section class=" pb-100 sections-bg">
         <div class="bg-section">
             <img src="#" alt="">
@@ -18,7 +23,7 @@
             <div class="row justify-content-center gy-4 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.7s">
             @if($products->count()>0)
                 @foreach ($products as $product )
-                <!-- ancore tag -->
+               
 
                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-5">
                     <div class="service_item style_1 shadow" style="text-align: left">

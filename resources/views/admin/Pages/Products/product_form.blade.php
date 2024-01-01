@@ -33,12 +33,7 @@
                     <span class="text-danger">{{$errors->first('product_Name')}}</span>
                    @endif
                 </div>
-                <!-- <div class="form-group">
-                    <label for="productName">Select Brand</label>
-                    <select class="form-control  name="brand_Name" id="">
-                        <option value="">Hello</option>
-                    </select>
-                </div> -->
+                
                 <div class="form-group">
                     <label for="productName">Select Category</label>
                     <select class="form-control"   name="category_id" required>

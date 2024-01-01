@@ -19,6 +19,11 @@ class DashboardController extends Controller
         return view('admin.Partial.dashboard',compact('categories','products','users','biddings'));
     }
      public function BidderInfo(){
-        return view('admin.Pages.Bidder.bidder-info');
+        $biddings = Bidding::all();
+        return view('admin.Pages.Bidder.bidder-info',compact('biddings'));
+     }
+
+     public function profileView(){
+        return view('admin.Pages.Profile.admin-profile');
      }
 }

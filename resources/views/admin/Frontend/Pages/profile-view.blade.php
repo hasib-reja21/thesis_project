@@ -1,11 +1,17 @@
 @extends('admin.Frontend.master')
 @section('content')
 
+<style>
+    img{
+        transform: translateX(0px);
+        border-radius: 5px;
+    }
+</style>
 <div class="container rounded bg-white py-5">
     <div class="row">
         <div class="col-md-3 border-right">
             <div class=" profile-img d-flex flex-column align-items-center text-center p-3 py-5">
-                <img class="rounded-circle mt-5" width="100px" src="{{url('/uploads//'.auth()->user()->image)}}">
+                <img class=" mt-5" height="250px" width="150px" src="{{url('/uploads//'.auth()->user()->image)}}">
                 <span class="font-weight-bold ">{{ auth()->user()->name }}</span><span class="text-black-50">
                     {{ auth()->user()->email }}
                 </span><span> </span>

@@ -11,13 +11,19 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
   <script type="module" src=" https://code.jquery.com/jquery-3.7.0.js"></script>
   <script type="module" src=" https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-
+  
 
   <style>
     .mb-4 {
       margin-top: 110px;
       margin-left: 116px;
     }
+    img{
+            transform: translate(-3px);
+       }
+       .btn{
+        width: 80px;
+       }
   </style>
 </head>
 

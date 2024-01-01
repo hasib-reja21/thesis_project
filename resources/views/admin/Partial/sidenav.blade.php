@@ -23,8 +23,7 @@
           <img src=" https://i.ibb.co/wYLjFNk/Hasib.jpg" class="rounded-circle border " style="width:40px; height:40px" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Hasib Reja</a>
-          <h5 class="text-light text-sm mt-1">Jr.Web Developer</h5>
+          <a href="{{ route('admin.profile') }}" class="d-block">{{ auth()->user()->name }}</a>
         </div>
       </div>
 
@@ -57,13 +56,12 @@
               <i class="fa-solid fa-user-plus"></i>
               <p>
                 User
-                <i class="fas fa-angle-left right"></i>
                 <span class="badge badge-info right"></span>
               </p>
             </a>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fa-solid fa-cart-shopping"></i>
               <p>
@@ -72,7 +70,8 @@
                 <span class="badge badge-info right"></span>
               </p>
             </a>
-          </li>
+          </li> -->
+          
           <li class="nav-item">
             <a href="" class="nav-link">
               <i class="fa-solid fa-tag"></i>
@@ -91,7 +90,7 @@
               </li>
             </ul>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fa-solid fa-user-check"></i>
               <p>
@@ -100,7 +99,8 @@
                 <span class="badge badge-info right"></span>
               </p>
             </a>
-          </li>
+          </li> -->
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fa-solid fa-bag-shopping"></i>
@@ -165,7 +165,7 @@
             </ul>
           </li> -->
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fa-solid fa-message"></i>
               <p>
@@ -174,7 +174,7 @@
                 <span class="badge badge-info right"></span>
               </p>
             </a>
-          </li>
+          </li> -->
 
           
           <li class="nav-item">
@@ -188,14 +188,8 @@
             </a>
           </li>
 
-          <!-- <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{url('/communication/form')}}" class="nav-link">
-              Contact
-            </a>
-          </li> -->
-
-       
-          <li class="nav-item">
+        
+          <!-- <li class="nav-item">
             <a href="" class="nav-link">
               <i class="fa-solid fa-chart-simple"></i>
               <p>
@@ -203,7 +197,7 @@
                 <span class="badge badge-info right"></span>
               </p>
             </a>
-          </li>
+          </li> -->
 
           <li class="nav-item">
             <a href="{{route('frontend.home')}}" class="nav-link">

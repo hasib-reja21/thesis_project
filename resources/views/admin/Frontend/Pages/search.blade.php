@@ -1,6 +1,11 @@
 
 @extends('admin.Frontend.master')
 @section('content')
+<style>
+      img{
+            transform: translate(-3px);
+       }
+</style>
 <section class=" pb-100 sections-bg">
         <div class="bg-section">
             <img src="#" alt="">

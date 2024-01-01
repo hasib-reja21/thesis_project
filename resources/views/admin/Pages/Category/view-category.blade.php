@@ -43,8 +43,7 @@
           <td>{{$category->status}}</td>
           
           <td>
-            <a href="" class="btn btn-dark mr-3 btn-sm">Edit</a>
-            <a href="" class="btn btn-danger btn-sm">Delete</a>
+            <a href="{{route('category.delete',$category->id)}}" class="btn btn-danger btn-sm">Delete</a>
           </td>
 
         </tr>

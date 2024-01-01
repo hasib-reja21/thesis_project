@@ -16,7 +16,16 @@
           </tr>
         </thead>
         <tbody>
-
+        @foreach ($biddings as $key=>$bid )
+          <tr>
+            <td>{{$key+1}}</td>
+            <td>{{$bid->user_name}}</td>
+            <td>{{$bid->price}}</td>
+            <td>{{$bid->product_id}}</td>
+            <td>{{$bid->created_at->format('d-m-Y | H:i:s')}} </td>
+            <td>{{$bid->status}}</td>
+          </tr>
+          @endforeach
 
        
 

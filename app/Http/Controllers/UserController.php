@@ -85,5 +85,17 @@ class UserController extends Controller
             ]);
             notify()->success('User created successfull');
             return redirect()->back();
+        } 
+
+        public function delete($id){
+            $users = User::find($id);
+            if($users){
+                $users->delete();
+            }
+            notify()->success('User Deleted Successfully.');
+            return redirect()->back();
+
+
         }
+
     }

@@ -21,7 +21,10 @@ class FrontendProductController extends Controller
         if($currentDateTime->gt($bid_expiration_date)){
             $maxBidderId = Bidding::where('price', Bidding::max('price'))->value('id');
             $changeStatus = Bidding::where('id',$maxBidderId)->update(['status'=>'win']);
-        }
+            
+           
+        } 
+        
         
         return view('admin.Frontend.Pages.product-view',compact('singleProduct','products','biddings'));
 

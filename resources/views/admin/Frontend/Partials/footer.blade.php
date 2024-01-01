@@ -5,7 +5,7 @@
                 <div class="row gy-4">
                     <div class="col-lg-4 col-sm-8 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.1s">
                         <div class="footer-widget">
-                            <a href="#0" class="footer-logo"><img style="width: 250px; height:150px;" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt="image"></a>
+                            <a href="#0" class="footer-logo"><img style="width: 150px; height:150px;" class="rounded-circle" src="https://i.ibb.co/WfR3xNJ/abs-3.jpg" alt="image"></a>
                             <p class="mt-4">Founded in 2011. Architecting secure, efficient, and user-friendly items by writing standard and well-documented codes to turn ideas into reality. Working on a daily basis to bring unique, standard, and trendy products for various marketplace and clients.</p>
                         </div>
                     </div>
@@ -70,13 +70,7 @@
                         <p class="mt-3">THESOFTKING Limited is not partnered with any other company or person. We work as a team and do not have any reseller, distributor, or partner!</p>
                     </div>
                     <div class="col-xl-4 col-md-4 mt-md-0 mt-4">
-                        <h6 class="fs--16px text-white text-md-end text-center mb-md-4 mb-3">Stay Connected</h6>
-                        <ul class="footer-social-links d-flex align-items-center justify-content-md-end justify-content-center">
-                            <li><a href="https://www.facebook.com/thesoftking" target="_blank"><i class="lab la-facebook-f"></i></a></li>
-                            <li><a href="https://twitter.com/thesoftking" target="_blank"><i class="lab la-twitter"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/thesoftking" target="_blank"><i class="lab la-linkedin-in"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCG7KVjCMa5LLI9PxW6XW7Hw" target="_blank"><i class="lab la-youtube"></i></a></li>
-                        </ul>
+                        
                     </div>
                 </div>
             </div>

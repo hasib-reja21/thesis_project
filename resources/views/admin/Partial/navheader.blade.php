@@ -89,5 +89,6 @@
       </a>
     </li>    
   </ul>
+  
   <div class=" btn  "></div><a class="btn btn-secondary mr-3 text-white " href="{{route('admin.logout')}}"><i class="fa fa-sign-out text-white mr-1" aria-hidden="true"></i>Sign out</a>
 </nav>

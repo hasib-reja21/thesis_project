@@ -79,6 +79,9 @@
         .hero__subtitle {
             transform: translateY(-73px);
         }
+        img{
+            transform: translate(-3px);
+        }
     </style>
 </head>
 
@@ -169,10 +172,13 @@
                                     <div class="countdown">
                                         <div id="bid_counter26">Initial time: {{ $product->created_at }} </div>
                                     </div>
-                                    <!-- for countdown the time -->
-                                    <!-- <p id="countdown">Time Left:</p> -->
+
+                                    <div class="countdown">
+                                        <div id="bid_counter26">Expired time: {{ $product->bid_expiration_date }} </div>
+                                    </div>
+
                                 </div>
-                                <span class="total-bids"><span style="color: orange;">|</span>bidding--{{ $biddings}}</span>
+                                <span class="total-bids"><span style="color: orange;">
                             </div>
 
                             <div class="text-center" style="text-align: left !important;">
@@ -577,6 +583,7 @@
             </div>
         </div>
     </section>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // Set the date we're counting down to

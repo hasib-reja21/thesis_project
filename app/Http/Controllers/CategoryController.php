@@ -28,8 +28,15 @@ class CategoryController extends Controller
             'name' =>$request->category_name,
             'description' =>$request->description_name
            ]);
-           return redirect()->back()->with('success','Your data has been store Successfully!!');
-                             
+           return redirect()->back()->with('success','Your data has been store Successfully!!');                    
     }
-   
+     
+    public function delete($id){
+        $categories = Category::find($id);
+        if($categories){
+            $categories->delete();
+        }
+        notify()->success('Category Deleted Successfully.');
+        return redirect()->back();
+    }
 }
