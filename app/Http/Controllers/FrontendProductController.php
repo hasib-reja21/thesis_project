@@ -21,8 +21,6 @@ class FrontendProductController extends Controller
         if($currentDateTime->gt($bid_expiration_date)){
             $maxBidderId = Bidding::where('price', Bidding::max('price'))->value('id');
             $changeStatus = Bidding::where('id',$maxBidderId)->update(['status'=>'win']);
-            
-           
         } 
         
         
@@ -32,25 +30,25 @@ class FrontendProductController extends Controller
      public function store( Request $request, $id){
       
 
-        $maxPrice = Bidding::max('price');
-        $validate=Validator::make($request->all(),[
-            'amount' => 'required|numeric|gt:' . $maxPrice,
-        ],
-        [
-            'amount.gt' => "The amount must be greater than {$maxPrice}.",
-        ]);
+        // $maxPrice = Bidding::max('price');
+        // $validate=Validator::make($request->all(),[
+        //     'amount' => 'required|numeric|gt:' . $maxPrice,
+        // ],
+        // [
+        //     'amount.gt' => "The amount must be greater than {$maxPrice}.",
+        // ]);
 
-        if($validate->fails())
-        {
-            notify()->error('The amount must be greater than max price!');
-            return redirect()->back()->withErrors($validate);
-        }
+        // if($validate->fails())
+        // {
+        //     notify()->error('The amount must be greater than max price!');
+        //     return redirect()->back()->withErrors($validate);
+        // }
         
         Bidding::create([
             'user_name'=>auth()->user()->name,
             'price'=>   $request->amount,
             'product_id' => $id,
-            'status' => 'pending',
+            'status' => 'Not Win',
         ]);
 
         notify()->success('Bid submitted successfull');

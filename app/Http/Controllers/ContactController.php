@@ -12,13 +12,14 @@ class ContactController extends Controller
         return view('admin.Pages.Contact.contact');
     }
     public function Store(Request $request){
-
+        // dd($request->all());
         Contact::create([
 
             'name' =>$request->fullname,
             'email' =>$request->email,
             'phone' =>$request->phone,
-            'message' =>$request->message
+            'message' =>$request->message,
+            'Address' =>$request->text
            ]);
            return redirect()->back()
                                ->with('success','Your data has been submitted Successfully!!'); 
@@ -28,13 +29,14 @@ class ContactController extends Controller
     }
 
     public function StoreMessage(Request $request){
-        // dd($request->all());
+        dd($request->all());
         Contact::create([
 
             'name' =>$request->name,
             'email' =>$request->email,
             'phone' =>$request->phone,
             'message' =>$request->message
+            // 'Address' =>$request->text
            ]);
            notify()->success('Your information is submitted Successfull!');
            return redirect()->back();

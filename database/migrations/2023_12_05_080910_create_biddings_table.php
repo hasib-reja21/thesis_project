@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('user_name');
             $table->double('price');
             $table->integer('product_id');
-            $table->string('status')->default('pending');
+            $table->string('status')->default('Not win');
             $table->timestamps();
         });
     }

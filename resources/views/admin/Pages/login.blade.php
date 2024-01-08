@@ -58,13 +58,13 @@
                                 <form action="{{route('admin.login.post')}}" method="post">
                                     @csrf
                                     <div class=" mb-4">
-                                        <input required type="email" id="email" name="email" class="form-control form-control-sm" placeholder="Enter your email address" />
+                                        <input type="email" id="email" name="email" class="form-control form-control-sm" placeholder="Enter your email address" required />
                                         @error('email')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
                                     <div class="form-outline mb-4">
-                                        <input required type="password" id="password" name="password" class="form-control form-control-sm" placeholder="Enter your password" />
+                                        <input  type="password" id="password" name="password" class="form-control form-control-sm" placeholder="Enter your password" required />
                                         @error('password')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror

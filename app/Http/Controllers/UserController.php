@@ -35,8 +35,9 @@ class UserController extends Controller
                 notify()->success('Login Successfull!');
                return redirect()->route('dashboard');
             }
-            return redirect()->back();
+            
             notify()->error('Invalid username or password');
+            return redirect()->back();
      }
         public function logout(){
             

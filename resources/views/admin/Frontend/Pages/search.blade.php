@@ -29,7 +29,6 @@
                     <div class="service_item style_1 shadow" style="text-align: left">
                         <div class="auction-thumb">
                             <a href=""><img style="width: 100%;" src="{{url('/uploads//'.$product->Product_Image)}}" alt="product_image"></a>
-                            <a href="#0" class="rating"><i class="fa-regular fa-star" style="color:yellow;"></i></a>
 
                         </div>
                         <div>
@@ -58,7 +57,7 @@
                                     </div>
                                     <div id="bid_counter26">Remaining time </div>
                                 </div>
-                                <span class="total-bids"><span style="color: orange;">|</span> 30 Bids</span>
+                                <span class="total-bids"><span style="color: orange;">
                             </div>
 
                             <div class="text-center" style="text-align: left !important;">

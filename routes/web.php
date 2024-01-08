@@ -9,6 +9,7 @@ use App\Http\Controllers\FrontendProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReportGenerator;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TimerController;
 
@@ -56,6 +57,9 @@ Route::group(['middleware'=>'auth'],function(){
 
     Route::get('/admin/profile/view',[DashboardController::class, 'profileView'])->name('admin.profile');
     Route::get("/",[DashboardController::class,'dashboard'])->name('dashboard');
+    Route::get('/report-generator',[ReportGenerator::class,'Report'])->name('report.print');
+    Route::get('/winner-list',[ReportGenerator::class,'WinList'])->name('win.list.print');
+
     Route::get("/bidder-list",[DashboardController::class,'BidderInfo'])->name('bidder.list');
 
 

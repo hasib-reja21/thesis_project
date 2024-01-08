@@ -35,6 +35,7 @@
       @endif
     </div>
     <h1 class="mb-3 ml-3" style="font-family: 'Courier New', Courier, monospace;">Create new user</h1>
+    <button onclick="printTable()" class="btn btn-primary mb-3"><a style="text-decoration: none; color:white;" href="">Print Table</a></button>
     <form action="{{ route('user.store') }}" method="post" enctype="multipart/form-data" >
       @csrf
       <div class="col-5 ">
@@ -65,7 +66,7 @@
       <!-- <div><a class="btn btn-success text-uppercase p-2 mb-2" href="{{route('category.create')}}"> <i class="fa-solid fa-circle-plus mr-2"></i>Add New user</a></div> -->
     </div>
 
-    <table class="table border table-hover" style="width: 800px; margin-left: 300px;">
+    <table class="table border table-hover" style="width: 800px; margin-left: 300px;" id="myTable">
       <thead class="bg-dark">
         <tr class="text-center">
           <th scope="col" class="border">ID</th>
@@ -97,3 +98,12 @@
 </body>
 </html>
 @endsection
+<script>
+    function printTable() {
+        var printContents = document.getElementById("myTable").outerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+</script>

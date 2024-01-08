@@ -79,7 +79,8 @@
         .hero__subtitle {
             transform: translateY(-73px);
         }
-        img{
+
+        img {
             transform: translate(-3px);
         }
     </style>
@@ -583,7 +584,7 @@
             </div>
         </div>
     </section>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // Set the date we're counting down to
@@ -611,20 +612,13 @@
                 clearInterval(x);
                 document.getElementById("timer").innerHTML = "BID TIME EXPIRED";
                 document.getElementById("bidAmount").disabled = true;
-                document.getElementById("bidNow").disabled = true;
+                document.getElementById("bidNow").disabled = true;4
                 var productId = document.getElementById("id").innerHTML;
-
-
-            //    window.location.replace('/product_status_update' + '/' + productId);
-
-
+                //    window.location.replace('/product_status_update' + '/' + productId);
             }
         }, 1000);
     </script>
-   
-
 </body>
-
 
 </html>
 

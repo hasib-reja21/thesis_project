@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
 use App\Models\User;
+use App\Models\Contact;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -91,7 +92,8 @@ class CustomerController extends Controller
     
     public function profile(){
         $products=Product::all();
-        return view('admin.Frontend.Pages.profile-view',compact('products'));
+        $contacts=Contact::all();
+        return view('admin.Frontend.Pages.profile-view',compact('products','contacts'));
 
     }
     public function edit($id){

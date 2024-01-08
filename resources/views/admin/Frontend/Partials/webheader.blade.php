@@ -116,7 +116,7 @@
                                             @endforeach
                                         </div>
                                     </li>
-                                    <li><a href="{{route('user.contact.form')}}">Contact</a></li>
+                                    <li><a  href="{{route('user.contact.form')}}">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>

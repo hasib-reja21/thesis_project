@@ -4,7 +4,8 @@
 
 
 <h4 class="shadow p-2  col-12 ml-2 mb-3  py-3 f-w-300 " style="background-color:rgba(255, 255, 255,1.0)">Dashboard</h4>
-    <section class="content">
+<button class=" btn btn-info mb-2 ml-2" ><a style="text-decoration: none; color:white;" href="{{route('report.print')}}">View</a></button>
+<section class="content" id="print">
         <div class="container-fluid">
 
             <div class="row">
@@ -69,3 +70,4 @@
     </section>
 
      @endsection
+  

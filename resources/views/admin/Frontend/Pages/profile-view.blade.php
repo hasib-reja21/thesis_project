@@ -2,7 +2,7 @@
 @section('content')
 
 <style>
-    img{
+    img {
         transform: translateX(0px);
         border-radius: 5px;
     }
@@ -16,11 +16,10 @@
                     {{ auth()->user()->email }}
                 </span><span> </span>
 
-                <div class="file btn btn-lg btn-primary mt-3">
+                <!-- <div class="file btn btn-lg btn-primary mt-3">
                     Change Photo
                     <input type="file" name="file">
-                    
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="col-md-5 border-right">
@@ -38,40 +37,47 @@
                     <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value="{{ auth()->user()->email }}"></div>
 
                 </div>
-                
+
                 <div class="row mt-3">
-                <div class="col-md-6"><label class="labels">Mobile Number</label><input type="mobile" class="form-control" placeholder="Mobile Number" value="01825132226"></div>
+                    <div class="col-md-6"><label class="labels">Mobile Number</label><input type="mobile" class="form-control" placeholder="Mobile Number" value="01825132226"></div>
                     <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value="Bangladesh"></div>
                 </div>
-                 <div class="mt-5 text-center"><button class="btn btn-primary profile-button"><a href="{{route('profile.edit',auth()->user()->id)}}">Update profile</a></button></div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button"><a href="{{route('profile.edit',auth()->user()->id)}}">Update profile</a></button></div>
             </div>
         </div>
         <div class="">
             <div class="">
-                <table class="table">
+                <h1 class="text-center  mb-3 " style="font-weight: bold; font-size:large">My Wining Info</h1>
+                <table class="table table-bordered">
                     <thead class="thead-dark">
-                        <tr>
+                        <tr class="text-center">
                             <th scope="col">ID</th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Category</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Message</th>
+                            <th scope="col">Address</th>
+
                         </tr>
                     </thead>
                     <tbody>
+
+                        @foreach ($contacts as $contact )
+                        @if($contact->email == auth()->user()->email)
                         <tr>
                             <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>Pending</td>
+                            <td>{{$contact->name}}</td>
+                            <td>{{$contact->email}}</td>
+                            <td>{{$contact->phone}}</td>
+                            <td>{{$contact->message}}</td>
+                            <td>{{$contact->Address}}</td>
                             <td>
-                            <a href="#" class="btn btn-danger btn-sm">Cancle</a>
                             </td>
                         </tr>
+                        @endif
+                        @endforeach
                     </tbody>
                 </table>
-
-
             </div>
         </div>
     </div>

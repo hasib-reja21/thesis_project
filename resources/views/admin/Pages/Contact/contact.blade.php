@@ -66,6 +66,9 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
+                                    <label for="text" class="form-label">Address<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="fullname" name="text" value="" >                                </div>
+                                <div class="col-12">
                                     <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
                                     <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
                                 </div>
